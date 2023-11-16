@@ -2,56 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class playerMovement : MonoBehaviour
 {
-    [SerializeField]
-    private float _speed;
+    private float velocidad = 5f;
+    private float velocidadRotacion = 720f;
+    private float horizontal;
+    private float vertical;
+    private float angulo;
+    private Vector2 movimiento;
 
-    [SerializeField]
-    private float _rotationSpeed;
+    private Animator anim;
 
-    private Rigidbody2D _rigidbody;
-    private Vector2 _movementInput;
-    private Vector2 _smoothedMovementInput;
-    private Vector2 _movementInputSmoothVelocity;
-
-    private void Awake()
+    void Start()
     {
-        _rigidbody = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
-    private void FixedUpdate()
+    void Update()
     {
-        SetPlayerVelocity();
-        RotateInDirectionOfInput();
-    }
-    //private void Update()
-    //{
-    //       Vector2 direction = new Vector2(Input)
-    //}
+        horizontal = Input.GetAxis("Horizontal");
+        vertical = Input.GetAxis("Vertical");
+        movimiento = new Vector2(horizontal, vertical);
+        movimiento.Normalize();
+        transform.Translate(movimiento * (velocidad * Time.deltaTime), Space.World);
 
-    private void SetPlayerVelocity()
-    {
-        _smoothedMovementInput = Vector2.SmoothDamp(
-                    _smoothedMovementInput,
-                    _movementInput,
-                    ref _movementInputSmoothVelocity,
-                    0.1f);
-
-        _rigidbody.velocity = _smoothedMovementInput * _speed;
-    }
-
-    private void RotateInDirectionOfInput()
-    {
-        if (_movementInput != Vector2.zero)
+        if (movimiento != Vector2.zero)
         {
-            Quaternion targetRotation = Quaternion.LookRotation(transform.forward, _smoothedMovementInput);
-            Quaternion rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, _rotationSpeed * Time.deltaTime);
+            angulo = Mathf.Atan2(movimiento.y, movimiento.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, angulo), velocidadRotacion * Time.deltaTime);
 
-            _rigidbody.MoveRotation(rotation);
+            anim.SetBool("isWalking", true);
+        }
+        else
+        {
+            anim.SetBool("isWalking", false);
         }
     }
-
 }
-
