@@ -4,63 +4,30 @@ using UnityEngine;
 
 public class EnemiMovement : MonoBehaviour
 {
-    [SerializeField]
-    private float _speed;
+    public Transform player;
+    public float moveSpeed = 5f;
+    private Rigidbody2D rb;
+    private Vector2 movement;
 
-    [SerializeField]
-    private float _rotationSpeed;
-
-    private Rigidbody2D _rigidbody;
-    private PlayerAwarenessController _playerAwarenessController;
-    private Vector2 _targetDirection;
-
-    private void Awake()
+    private void Start()
     {
-        _rigidbody = GetComponent<Rigidbody2D>();
-        _playerAwarenessController = GetComponent<PlayerAwarenessController>();
+        rb = this.GetComponent<Rigidbody2D>();
     }
 
+    private void Update()
+    {
+        Vector3 direction = player.position - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        rb.rotation = angle;
+        direction.Normalize();
+        movement = direction;
+    }
     private void FixedUpdate()
     {
-        UpdateTargetDirection();
-        RotateTowardsTarget();
-        SetVelocity();
+        moveCharacter(movement);
     }
-
-    private void UpdateTargetDirection()
+    void moveCharacter(Vector2 direction)
     {
-        if (_playerAwarenessController.AwareOfPlayer)
-        {
-            _targetDirection = _playerAwarenessController.DirectionToPlayer;
-        }
-        else
-        {
-            _targetDirection = Vector2.zero;
-        }
-    }
-
-    private void RotateTowardsTarget()
-    {
-        if (_targetDirection == Vector2.zero)
-        {
-            return;
-        }
-
-        Quaternion targetRotation = Quaternion.LookRotation(transform.forward, _targetDirection);
-        Quaternion rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, _rotationSpeed * Time.deltaTime);
-
-        _rigidbody.SetRotation(rotation);
-    }
-
-    private void SetVelocity()
-    {
-        if (_targetDirection == Vector2.zero)
-        {
-            _rigidbody.velocity = Vector2.zero;
-        }
-        else
-        {
-            _rigidbody.velocity = transform.up * _speed;
-        }
+        rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
 }
