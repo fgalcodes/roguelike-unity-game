@@ -70,7 +70,7 @@ public class BoardManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Añade tiles aleatorios al board.
+    /// AÃ±ade tiles aleatorios al board.
     /// </summary>
     /// <param name="tileArray"></param>
     /// <param name="minimun"></param>
