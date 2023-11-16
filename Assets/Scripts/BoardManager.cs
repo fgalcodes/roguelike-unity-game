@@ -49,8 +49,9 @@ public class BoardManager : MonoBehaviour
             {
                 GameObject toInstantiate = floorTiles[Random.Range(0, floorTiles.Length)];
 
-                if (i == -1 || i == columns || j == -1 || j == rows)
-                    toInstantiate = wallTiles[Random.Range(0, wallTiles.Length)];
+                // Agrega el marco
+                //if (i == -1 || i == columns || j == -1 || j == rows)
+                //    toInstantiate = wallTiles[Random.Range(0, wallTiles.Length)];
                 
                 GameObject instance = Instantiate(toInstantiate, new Vector3(i,j,0f), Quaternion.identity) as GameObject;
 
@@ -68,6 +69,12 @@ public class BoardManager : MonoBehaviour
         return randomPosition;
     }
 
+    /// <summary>
+    /// Añade tiles aleatorios al board.
+    /// </summary>
+    /// <param name="tileArray"></param>
+    /// <param name="minimun"></param>
+    /// <param name="maxiumum"></param>
     void LayoutObjectAtRandom(GameObject[] tileArray, int minimun, int maxiumum)
     {
         int objectCount = Random.Range(minimun, maxiumum + 1);
@@ -85,7 +92,7 @@ public class BoardManager : MonoBehaviour
     {
         BoardSetup();
         InitialiseList();
-        LayoutObjectAtRandom(outerWallTiles, wallCount.minimum, wallCount.maximum);
+        //LayoutObjectAtRandom(outerWallTiles, wallCount.minimum, wallCount.maximum);
 
     }
 
