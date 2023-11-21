@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
+
     [SerializeField] private Transform controladorDisparo;
     [SerializeField] private GameObject bullet;
 
@@ -17,6 +18,14 @@ public class Shoot : MonoBehaviour
 
     private void Shooting()
     {
-        Instantiate(bullet, controladorDisparo.position, controladorDisparo.rotation);
+        //Instantiate(bullet, controladorDisparo.position, controladorDisparo.rotation);
+
+        GameObject bulletPrefab = ObjectPool.instance.GetPoolObject();
+
+        if (bulletPrefab != null)
+        {
+            bulletPrefab.transform.position = controladorDisparo.position;
+            bulletPrefab.SetActive(true);
+        }
     }
 }

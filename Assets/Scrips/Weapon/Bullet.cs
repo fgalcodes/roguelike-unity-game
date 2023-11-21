@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Bullet : MonoBehaviour
 {
@@ -16,14 +17,18 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         //Debug.Log(other.name);
-        if (other.CompareTag("Enemigo"))
+        switch (other.tag)
         {
-            other.GetComponent<EnemiMovement>().TomarDaño(daño);
-            Destroy(gameObject);
+            case "Enemigo":
+                other.GetComponent<EnemiMovement>().TomarDaño(daño);
+                break;
+            case "Wall":
+                gameObject.SetActive(false);
+                break;
+
         }
-        else
-        {
-            Destroy(gameObject);
-        }
+
+        Destroy(gameObject);
+
     }
 }
