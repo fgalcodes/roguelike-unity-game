@@ -21,6 +21,8 @@ public class Bullet : MonoBehaviour
         {
             case "Enemigo":
                 other.GetComponent<EnemiMovement>().TomarDaño(daño);
+                gameObject.SetActive(false);
+
                 break;
             case "Wall":
                 gameObject.SetActive(false);
@@ -28,7 +30,7 @@ public class Bullet : MonoBehaviour
 
         }
 
-        Destroy(gameObject);
+        //Destroy(gameObject);
 
     }
 }
