@@ -24,6 +24,7 @@ public class Shoot : MonoBehaviour
         if (bulletPrefab != null)
         {
             bulletPrefab.transform.position = controladorDisparo.position;
+            bulletPrefab.transform.rotation = controladorDisparo.rotation;
             bulletPrefab.SetActive(true);
         }
     }

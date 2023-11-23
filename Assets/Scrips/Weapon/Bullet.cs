@@ -9,9 +9,10 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float velocidad;
     [SerializeField] private float daño;
 
+
     private void Update()
     {
-        transform.Translate(Input.mousePosition * velocidad * Time.deltaTime);
+        transform.Translate(Vector3.up * (velocidad * Time.deltaTime));
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -30,7 +31,5 @@ public class Bullet : MonoBehaviour
                 break;
 
         }
-
-
     }
 }
