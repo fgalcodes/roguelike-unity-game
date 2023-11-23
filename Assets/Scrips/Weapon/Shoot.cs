@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
-
     [SerializeField] private Transform controladorDisparo;
     [SerializeField] private GameObject bullet;
 

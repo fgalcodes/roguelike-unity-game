@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Vector2.up * velocidad * Time.deltaTime);
+        transform.Translate(Input.mousePosition * velocidad * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -22,15 +22,15 @@ public class Bullet : MonoBehaviour
             case "Enemigo":
                 other.GetComponent<EnemiMovement>().TomarDaño(daño);
                 gameObject.SetActive(false);
-
+                //Destroy(gameObject);
                 break;
             case "Wall":
                 gameObject.SetActive(false);
+                //Destroy(gameObject);
                 break;
 
         }
 
-        //Destroy(gameObject);
 
     }
 }
