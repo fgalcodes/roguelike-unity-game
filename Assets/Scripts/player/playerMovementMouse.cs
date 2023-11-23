@@ -12,7 +12,7 @@ public class playerMovementMouse : MonoBehaviour
     Vector2 movement;
     Vector2 mousePos;
 
-
+    
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");

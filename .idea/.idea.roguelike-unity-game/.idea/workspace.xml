@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06b54455-30f4-4935-bbca-fe1fadb957a6" name="Changes" comment="" />
+    <list default="true" id="06b54455-30f4-4935-bbca-fe1fadb957a6" name="Changes" comment="files">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.roguelike-unity-game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.roguelike-unity-game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/player/playerAnimatorManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/player/playerAnimatorManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/player/playerMovementMouse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/player/playerMovementMouse.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,6 +121,7 @@
       <workItem from="1700770857999" duration="158000" />
       <workItem from="1700771033139" duration="3269000" />
       <workItem from="1700777093615" duration="186000" />
+      <workItem from="1700777401490" duration="4392000" />
     </task>
     <task id="LOCAL-00001" summary="delete scripts errors">
       <option name="closed" value="true" />
@@ -173,7 +179,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700777252565</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="files">
+      <option name="closed" value="true" />
+      <created>1700777450680</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1700777450680</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +216,7 @@
     <MESSAGE value="walkers" />
     <MESSAGE value="pool bullet" />
     <MESSAGE value="reename directories" />
-    <option name="LAST_COMMIT_MESSAGE" value="reename directories" />
+    <MESSAGE value="files" />
+    <option name="LAST_COMMIT_MESSAGE" value="files" />
   </component>
 </project>
