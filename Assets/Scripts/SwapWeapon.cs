@@ -5,21 +5,36 @@ using UnityEngine;
 public class SwapWeapon : MonoBehaviour
 {
     public AnimatorController[] weapon;
-    public Animator animator;
+    private Animator animator;
 
-    enum Weapons
+    private int index = 0;
+
+    private void Start()
     {
-        Gun = 0,
-        Knife = 1,
-        Shotgun = 2,
-        Sniper = 3
-    }
-    private void Awake()
-    {
-        animator.GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
-    public void ChangeController()
+    private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E) && !(index > weapon.Length -1))
+        {
+            Debug.Log("E");
+            animator.runtimeAnimatorController = weapon[index];
+            index++;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q) && !(index < 0))
+        {
+            Debug.Log("Q");
+
+            animator.runtimeAnimatorController = weapon[index];
+            index--;
+        }
+
+        if (index > weapon.Length -1) index--;
+        if (index < 0 ) index++;
+        
+
     }
+
 }
