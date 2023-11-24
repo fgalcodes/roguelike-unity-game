@@ -15,7 +15,7 @@ public class PlayerAwarenessController : MonoBehaviour
 
     private void Awake()
     {
-        _player = FindObjectOfType<playerMovementMouse>().transform;
+        _player = FindObjectOfType<playerMovement>().transform;
     }
 
     

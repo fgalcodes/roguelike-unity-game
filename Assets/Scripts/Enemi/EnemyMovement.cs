@@ -9,11 +9,23 @@ public class EnemiMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
 
-    [SerializeField] private float vida;
+    [SerializeField] private float maxHealth = 100f;
+    private float currentHealth;
+
+    private Healthbar healthBar;
+
+    public BloodEffect bloodEffect;
+    public float bloodDuration = 60f;
 
     private void Start()
     {
-        rb = this.GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
+        currentHealth = maxHealth;
+        healthBar = GetComponentInChildren<Healthbar>();
+        if (healthBar != null)
+        {
+            healthBar.UpdateHealthbar(maxHealth, currentHealth, currentHealth);
+        }
     }
 
     private void Update()
@@ -35,11 +47,26 @@ public class EnemiMovement : MonoBehaviour
 
     public void TomarDaño(float daño)
     {
-        vida -= daño;
+        currentHealth -= daño;
 
-        if (vida <= 0)
+        if (currentHealth <= 0)
         {
-            Destroy(gameObject);
+            DestroyEnemy();
         }
+
+        if (healthBar != null)
+        {
+            healthBar.UpdateHealthbar(maxHealth, currentHealth, currentHealth + daño);
+        }
+    }
+    void DestroyEnemy()
+    {
+        
+        if (bloodEffect != null)
+        {
+            bloodEffect.ShowBloodEffect(transform.position, bloodDuration);
+        }
+
+        Destroy(gameObject); 
     }
 }
