@@ -6,7 +6,7 @@ public class ObjectPool : MonoBehaviour
 {
     public static ObjectPool instance;
     private List<GameObject> pool = new List<GameObject>();
-    private int amountToPool = 10;
+    [SerializeField] int amountToPool = 10;
 
     [SerializeField] private GameObject bulletPrefab;
 
