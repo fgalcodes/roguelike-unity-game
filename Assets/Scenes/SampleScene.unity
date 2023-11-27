@@ -8473,6 +8473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d7276d3a8cee64418a676ad8e0ebbf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  amountToPool: 10
   bulletPrefab: {fileID: 3300052460564410105, guid: 3db8e72fdecd56e4fa9fa843cae6ac61,
     type: 3}
 --- !u!1 &1619144227

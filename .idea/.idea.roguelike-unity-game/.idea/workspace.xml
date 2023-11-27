@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06b54455-30f4-4935-bbca-fe1fadb957a6" name="Changes" comment="files">
+    <list default="true" id="06b54455-30f4-4935-bbca-fe1fadb957a6" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.roguelike-unity-game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.roguelike-unity-game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/player/playerAnimatorManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/player/playerAnimatorManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/player/playerMovementMouse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/player/playerMovementMouse.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +35,9 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DungeonGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapon/.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scripts/Weapon/ObjectPool.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -121,7 +120,8 @@
       <workItem from="1700770857999" duration="158000" />
       <workItem from="1700771033139" duration="3269000" />
       <workItem from="1700777093615" duration="186000" />
-      <workItem from="1700777401490" duration="4392000" />
+      <workItem from="1700777401490" duration="4448000" />
+      <workItem from="1701029016988" duration="6104000" />
     </task>
     <task id="LOCAL-00001" summary="delete scripts errors">
       <option name="closed" value="true" />
@@ -187,7 +187,23 @@
       <option name="project" value="LOCAL" />
       <updated>1700777450680</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="trying change animators controllers">
+      <option name="closed" value="true" />
+      <created>1700781922744</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1700781922744</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update">
+      <option name="closed" value="true" />
+      <created>1701029405235</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1701029405235</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +233,8 @@
     <MESSAGE value="pool bullet" />
     <MESSAGE value="reename directories" />
     <MESSAGE value="files" />
-    <option name="LAST_COMMIT_MESSAGE" value="files" />
+    <MESSAGE value="trying change animators controllers" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
