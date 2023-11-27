@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemiMovement : MonoBehaviour
 {
+    private GameObject _player;
     public Transform player;
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
@@ -19,6 +20,9 @@ public class EnemiMovement : MonoBehaviour
 
     private void Start()
     {
+        _player = GameObject.FindGameObjectWithTag("Player");
+        player = _player.transform;
+
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
         healthBar = GetComponentInChildren<Healthbar>();

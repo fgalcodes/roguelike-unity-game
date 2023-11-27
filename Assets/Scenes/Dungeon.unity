@@ -410,7 +410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilemap: {fileID: 70580240}
-  floorTile: {fileID: 11400000, guid: 458d6674766aa774a9a1539baf153b86, type: 2}
+  floorTile: {fileID: 11400000, guid: 68c58b20a7da3d64c94eb136db1aedb8, type: 2}
   mapWidth: 100
   mapHeight: 100
   numberOfRooms: 4
