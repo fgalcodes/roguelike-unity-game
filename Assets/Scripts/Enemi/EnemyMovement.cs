@@ -14,11 +14,16 @@ public class EnemiMovement : MonoBehaviour
 
     private Healthbar healthBar;
 
-    public BloodEffect bloodEffect;
+    public BloodEffect bloodEffectPrefab;
     public float bloodDuration = 60f;
+
+    private GameObject playerObject;
 
     private void Start()
     {
+        playerObject = GameObject.FindGameObjectWithTag("Player");
+        player = playerObject.transform;
+
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
         healthBar = GetComponentInChildren<Healthbar>();
@@ -61,12 +66,14 @@ public class EnemiMovement : MonoBehaviour
     }
     void DestroyEnemy()
     {
-        
-        if (bloodEffect != null)
+
+        if (bloodEffectPrefab != null)
         {
-            bloodEffect.ShowBloodEffect(transform.position, bloodDuration);
+            // Instancia la imagen de sangre en la posición del enemigo
+            BloodEffect blood = Instantiate(bloodEffectPrefab, transform.position, Quaternion.identity);
+            blood.ShowBloodEffect(transform.position, bloodDuration);
         }
 
-        Destroy(gameObject); 
+        Destroy(gameObject);
     }
 }
