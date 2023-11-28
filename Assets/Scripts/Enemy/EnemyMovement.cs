@@ -19,6 +19,13 @@ public class EnemiMovement : MonoBehaviour
 
     private GameObject playerObject;
 
+    // Referencia al Animator del enemigo
+    private Animator animator;
+
+    // Estados de animación
+    private bool isWalking = false;
+    private bool isAttacking = false;
+
     private void Start()
     {
         playerObject = GameObject.FindGameObjectWithTag("Player");
@@ -27,6 +34,7 @@ public class EnemiMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
         healthBar = GetComponentInChildren<Healthbar>();
+        animator = GetComponent<Animator>();
         if (healthBar != null)
         {
             healthBar.UpdateHealthbar(maxHealth, currentHealth, currentHealth);
@@ -40,6 +48,22 @@ public class EnemiMovement : MonoBehaviour
         rb.rotation = angle;
         direction.Normalize();
         movement = direction;
+
+        // Determinar si el enemigo está caminando o atacando
+        if (movement.magnitude > 0)
+        {
+            isWalking = true;
+            isAttacking = false;
+        }
+        else
+        {
+            isWalking = false;
+            isAttacking = false; // Ajusta esto según tu lógica de ataque
+        }
+
+        // Actualiza los booleanos en el Animator
+        animator.SetBool("isWalking", isWalking);
+        animator.SetBool("isAttacking", isAttacking);
     }
     private void FixedUpdate()
     {
@@ -48,6 +72,32 @@ public class EnemiMovement : MonoBehaviour
     void moveCharacter(Vector2 direction)
     {
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Verificamos si la colisión es con el jugador
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            // Cambiamos el estado a atacando
+            isAttacking = true;
+
+            // Actualizamos el booleano en el Animator
+            animator.SetBool("isAttacking", isAttacking);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        // Verificamos si la colisión con el jugador ha terminado
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            // Cambiamos el estado a no atacando
+            isAttacking = false;
+
+            // Actualizamos el booleano en el Animator
+            animator.SetBool("isAttacking", isAttacking);
+        }
     }
 
     public void TomarDaño(float daño)
