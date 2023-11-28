@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemiMovement : MonoBehaviour
 {
-    private GameObject _player;
     public Transform player;
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
@@ -15,13 +14,15 @@ public class EnemiMovement : MonoBehaviour
 
     private Healthbar healthBar;
 
-    public BloodEffect bloodEffect;
+    public BloodEffect bloodEffectPrefab;
     public float bloodDuration = 60f;
+
+    private GameObject playerObject;
 
     private void Start()
     {
-        _player = GameObject.FindGameObjectWithTag("Player");
-        player = _player.transform;
+        playerObject = GameObject.FindGameObjectWithTag("Player");
+        player = playerObject.transform;
 
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
@@ -65,12 +66,14 @@ public class EnemiMovement : MonoBehaviour
     }
     void DestroyEnemy()
     {
-        
-        if (bloodEffect != null)
+
+        if (bloodEffectPrefab != null)
         {
-            bloodEffect.ShowBloodEffect(transform.position, bloodDuration);
+            // Instancia la imagen de sangre en la posición del enemigo
+            BloodEffect blood = Instantiate(bloodEffectPrefab, transform.position, Quaternion.identity);
+            blood.ShowBloodEffect(transform.position, bloodDuration);
         }
 
-        Destroy(gameObject); 
+        Destroy(gameObject);
     }
 }
