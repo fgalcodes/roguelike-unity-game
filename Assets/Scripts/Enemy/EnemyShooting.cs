@@ -10,46 +10,45 @@ public class EnemyShooting : MonoBehaviour
 
     [SerializeField] private float bulletRange = 14;
 
-    public Transform target;
-    public float speed = 1.0f;
-
     // Start is called before the first frame update
     void Start()
     {
-
-        Debug.Log("Find");
         _player = GameObject.FindGameObjectWithTag("Player");
-        Instantiate(bullet);
+        transform.LookAt(_player.transform);
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Determine which direction to rotate towards
-        Vector3 targetDirection = target.position - transform.position;
-
-        // The step size is equal to speed times frame time.
-        float singleStep = speed * Time.deltaTime;
-
-        // Rotate the forward vector towards the target direction by one step
-        Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
-
-
         float distance = Vector2.Distance(transform.position, _player.transform.position);
 
         // Debug.Log(distance);
 
         if (distance < bulletRange)
         {
+            RotateTowards();
             _timer += Time.deltaTime;
 
             if (_timer > 2)
             {
                 _timer = 0;
-                //Shoot();
+                Shoot();
             }
         }
     }
+
+    private void RotateTowards()
+    {
+        var playerPos = _player.transform.position;
+        var position = transform.position;
+
+        float angle = Mathf.Atan2(playerPos.y - position.y, playerPos.x - position.x) * Mathf.Rad2Deg - 90f;
+
+        Quaternion targetRotation = Quaternion.Euler(0f, 0f, angle);
+
+        transform.rotation = targetRotation;
+    }
+
     void Shoot()
     {
         Debug.Log(("shoot"));
