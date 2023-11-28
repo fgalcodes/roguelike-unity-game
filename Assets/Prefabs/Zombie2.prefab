@@ -141,7 +141,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4211047404648789457}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -200,7 +200,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: 938b557497159b7469619e35cf365079, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 770b53cc05666c74da6431a8d43d27cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 4978214490636451825, guid: 9f10f956d96756a468415c73119da4e3, type: 3}
+  player: {fileID: 0}
   moveSpeed: 3
   maxHealth: 100
   bloodEffectPrefab: {fileID: 1178629327815978777, guid: 2125eea333fdda24d89ed76bbde58121,

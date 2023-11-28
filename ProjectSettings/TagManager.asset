@@ -17,6 +17,8 @@ TagManager:
   - SmokeTrail
   - Spawner
   - GunFlash
+  - Enemigo
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -51,6 +53,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: ScrollingBackground
+    uniqueID: 920072061
+    locked: 0
+  - name: Ground
+    uniqueID: 938257443
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
