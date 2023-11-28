@@ -46,7 +46,6 @@ GameObject:
   - component: {fileID: 2791618576193350967}
   - component: {fileID: 7675363900348281572}
   - component: {fileID: 8861431844336853101}
-  - component: {fileID: 5418433947445442023}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -244,20 +243,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controladorDisparo: {fileID: 2682162535533983184}
   bullet: {fileID: 3300052460564410105, guid: 3db8e72fdecd56e4fa9fa843cae6ac61, type: 3}
---- !u!114 &5418433947445442023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5442561475489213942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac1fdfea5959c3742a7f1f5306e454fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapon:
-  - {fileID: 9100000, guid: 78913cf0fb0862d4696611e6fa981a26, type: 2}
-  - {fileID: 9100000, guid: 689cb37e5f7978048aa22a8341fc0bb9, type: 2}
-  - {fileID: 9100000, guid: e6be897155a65904cb0a033af8ab00f1, type: 2}
-  - {fileID: 9100000, guid: 6af1a78d64a1bd749b41486e76b256a3, type: 2}

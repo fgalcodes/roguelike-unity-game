@@ -926,26 +926,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 792469877454022018, guid: cb60a2f0cf515cc46ab76a39ec3f1ef8,
-        type: 3}
-      propertyPath: orthographic size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 792469877454022018, guid: cb60a2f0cf515cc46ab76a39ec3f1ef8,
-        type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 0.31764707
-      objectReference: {fileID: 0}
-    - target: {fileID: 792469877454022018, guid: cb60a2f0cf515cc46ab76a39ec3f1ef8,
-        type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0.31764707
-      objectReference: {fileID: 0}
-    - target: {fileID: 792469877454022018, guid: cb60a2f0cf515cc46ab76a39ec3f1ef8,
-        type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0.31764707
-      objectReference: {fileID: 0}
     - target: {fileID: 6619500627794017160, guid: cb60a2f0cf515cc46ab76a39ec3f1ef8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1001,16 +981,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2942479001261972898, guid: cb60a2f0cf515cc46ab76a39ec3f1ef8, type: 3}
-    - {fileID: 1461593146547429277, guid: cb60a2f0cf515cc46ab76a39ec3f1ef8, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8256719492084414124, guid: cb60a2f0cf515cc46ab76a39ec3f1ef8,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 688715740}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb60a2f0cf515cc46ab76a39ec3f1ef8, type: 3}
 --- !u!20 &688715738 stripped
 Camera:
@@ -1018,26 +992,6 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 688715737}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &688715739 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8256719492084414124, guid: cb60a2f0cf515cc46ab76a39ec3f1ef8,
-    type: 3}
-  m_PrefabInstance: {fileID: 688715737}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &688715740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 688715739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9576d99ed6b08343af0e3fa38c5fba3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: {x: 0, y: 1.5, z: 0}
-  damping: 0.125
 --- !u!1 &881601530
 GameObject:
   m_ObjectHideFlags: 3
@@ -8280,25 +8234,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
-    - target: {fileID: 1312447791171746838, guid: 53b0673824a7f7241b2960a7e8b22a2d,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312447791171746838, guid: 53b0673824a7f7241b2960a7e8b22a2d,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4211047404648789457, guid: 53b0673824a7f7241b2960a7e8b22a2d,
         type: 3}
       propertyPath: m_Name
       value: Zombie2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4211047404648789457, guid: 53b0673824a7f7241b2960a7e8b22a2d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11661,11 +11600,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2947344246277727579, guid: d695dff433bd85342b7595103e8e8333,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6660000663915454266, guid: d695dff433bd85342b7595103e8e8333,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11720,11 +11654,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tower
-      objectReference: {fileID: 0}
-    - target: {fileID: 8287999244038587534, guid: d695dff433bd85342b7595103e8e8333,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
