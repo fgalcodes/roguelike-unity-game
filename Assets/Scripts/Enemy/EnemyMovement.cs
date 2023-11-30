@@ -12,19 +12,24 @@ public class EnemiMovement : MonoBehaviour
     [SerializeField] private float maxHealth = 100f;
     private float currentHealth;
 
-    private Healthbar healthBar;
+    [SerializeField] private Healthbar healthBar;
 
     public BloodEffect bloodEffectPrefab;
     public float bloodDuration = 60f;
 
     private GameObject playerObject;
 
-    // Referencia al Animator del enemigo
     private Animator animator;
 
-    // Estados de animación
-    private bool isWalking = false;
     private bool isAttacking = false;
+
+    public enum States
+    {
+        Run,
+        Attack,
+        Die
+    }
+    public States currentState;
 
     private void Start()
     {
@@ -33,7 +38,7 @@ public class EnemiMovement : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
-        healthBar = GetComponentInChildren<Healthbar>();
+        healthBar.GetComponentInChildren<Healthbar>();
         animator = GetComponent<Animator>();
         if (healthBar != null)
         {
@@ -43,31 +48,41 @@ public class EnemiMovement : MonoBehaviour
 
     private void Update()
     {
+
+        switch (currentState)
+        {
+            case States.Attack:
+                if (!isAttacking)
+                {
+                    animator.SetBool("isWalking", false);
+                    animator.SetBool("isAttacking", true);
+                    isAttacking = true;
+                }
+                break;
+            case States.Run:
+                if (movement.magnitude > 0 && !isAttacking)
+                {
+                    animator.SetBool("isWalking", true);
+                    animator.SetBool("isAttacking", false);
+                }
+                break;
+            case States.Die:
+                animator.SetBool("isDead", true);
+                break;
+        }
         Vector3 direction = player.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         rb.rotation = angle;
         direction.Normalize();
         movement = direction;
 
-        // Determinar si el enemigo está caminando o atacando
-        if (movement.magnitude > 0)
-        {
-            isWalking = true;
-            isAttacking = false;
-        }
-        else
-        {
-            isWalking = false;
-            isAttacking = false; // Ajusta esto según tu lógica de ataque
-        }
-
-        // Actualiza los booleanos en el Animator
-        animator.SetBool("isWalking", isWalking);
-        animator.SetBool("isAttacking", isAttacking);
     }
     private void FixedUpdate()
     {
-        moveCharacter(movement);
+        if (currentState == States.Run)
+        {
+            moveCharacter(movement);
+        }
     }
     void moveCharacter(Vector2 direction)
     {
@@ -76,27 +91,27 @@ public class EnemiMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Verificamos si la colisión es con el jugador
         if (collision.gameObject.CompareTag("Player"))
         {
-            // Cambiamos el estado a atacando
-            isAttacking = true;
+            currentState = States.Attack;
+        }
 
-            // Actualizamos el booleano en el Animator
-            animator.SetBool("isAttacking", isAttacking);
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            isAttacking = true;
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        // Verificamos si la colisión con el jugador ha terminado
         if (collision.gameObject.CompareTag("Player"))
         {
-            // Cambiamos el estado a no atacando
             isAttacking = false;
-
-            // Actualizamos el booleano en el Animator
-            animator.SetBool("isAttacking", isAttacking);
+            currentState = States.Run;
         }
     }
 
@@ -106,6 +121,7 @@ public class EnemiMovement : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            currentState = States.Die;
             DestroyEnemy();
         }
 
@@ -119,7 +135,6 @@ public class EnemiMovement : MonoBehaviour
 
         if (bloodEffectPrefab != null)
         {
-            // Instancia la imagen de sangre en la posición del enemigo
             BloodEffect blood = Instantiate(bloodEffectPrefab, transform.position, Quaternion.identity);
             blood.ShowBloodEffect(transform.position, bloodDuration);
         }
