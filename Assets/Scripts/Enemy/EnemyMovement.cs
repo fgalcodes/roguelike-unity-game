@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemiMovement : MonoBehaviour
 {
-    public Transform player;
+    private Transform player;
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Vector2 movement;
@@ -48,7 +48,8 @@ public class EnemiMovement : MonoBehaviour
 
     private void Update()
     {
-
+        healthBar.transform.rotation = Quaternion.Euler(Vector3.zero);
+        
         switch (currentState)
         {
             case States.Attack:

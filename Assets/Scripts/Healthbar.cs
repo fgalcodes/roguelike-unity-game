@@ -6,17 +6,8 @@ using UnityEngine.UI;
 public class Healthbar : MonoBehaviour
 {
     [SerializeField] private Image healthbarImage;
-    [SerializeField] private Transform enemyPos;
 
-    //private void Start()
-    //{
-    //    enemyPos
-    //}
-    private void Update()
-    {
-        transform.position = enemyPos.transform.position;
-
-    }
+    
     public void UpdateHealthbar(float maxHealth, float health, float previousHealth)
     {
         float targetHealth = health / maxHealth;
