@@ -12,7 +12,7 @@ public class EnemiMovement : MonoBehaviour
     [SerializeField] private float maxHealth = 100f;
     private float currentHealth;
 
-    private Healthbar healthBar;
+    [SerializeField] private Healthbar healthBar;
 
     public BloodEffect bloodEffectPrefab;
     public float bloodDuration = 60f;
@@ -38,7 +38,7 @@ public class EnemiMovement : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
-        healthBar = GetComponentInChildren<Healthbar>();
+        healthBar.GetComponentInChildren<Healthbar>();
         animator = GetComponent<Animator>();
         if (healthBar != null)
         {
@@ -48,6 +48,7 @@ public class EnemiMovement : MonoBehaviour
 
     private void Update()
     {
+
         switch (currentState)
         {
             case States.Attack:
