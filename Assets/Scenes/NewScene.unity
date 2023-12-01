@@ -11817,7 +11817,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 13.611916, y: -5.5}
+  m_Offset: {x: 13.122446, y: -5.0123634}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -11828,7 +11828,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.8084269, y: 27.032257}
+  m_Size: {x: 1.8294878, y: 26.056984}
   m_EdgeRadius: 0
 --- !u!1001 &1904516155
 PrefabInstance:
@@ -11838,6 +11838,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2791618576193350967, guid: 9f10f956d96756a468415c73119da4e3,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 0f6a638c324a35b4581fbc7159197458, type: 2}
+    - target: {fileID: 3208002170838575193, guid: 9f10f956d96756a468415c73119da4e3,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3208002170838575193, guid: 9f10f956d96756a468415c73119da4e3,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3208002170838575193, guid: 9f10f956d96756a468415c73119da4e3,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4978214490636451825, guid: 9f10f956d96756a468415c73119da4e3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11898,6 +11918,16 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 688715738}
+    - target: {fileID: 7675363900348281572, guid: 9f10f956d96756a468415c73119da4e3,
+        type: 3}
+      propertyPath: axis
+      value: 
+      objectReference: {fileID: 1904516156}
+    - target: {fileID: 7675363900348281572, guid: 9f10f956d96756a468415c73119da4e3,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5807098937264155099, guid: 9f10f956d96756a468415c73119da4e3, type: 3}
     m_RemovedGameObjects: []
@@ -11987,6 +12017,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6421534360680468663, guid: 53b0673824a7f7241b2960a7e8b22a2d,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6421534360680468663, guid: 53b0673824a7f7241b2960a7e8b22a2d,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9154273846606236405, guid: 53b0673824a7f7241b2960a7e8b22a2d,
+        type: 3}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

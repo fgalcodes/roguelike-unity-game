@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06b54455-30f4-4935-bbca-fe1fadb957a6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.roguelike-unity-game/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.roguelike-unity-game/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.roguelike-unity-game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.roguelike-unity-game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Zombie2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Zombie2.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Healthbar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Healthbar.cs" afterDir="false" />
@@ -46,12 +43,13 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scenes/NewScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Prefabs/Player.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DungeonGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyBullet.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scripts/Enemy/EnemyMovement.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scripts/Healthbar.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapon/.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scripts/player/playerMovementMouse.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scripts/player/playerMovementMouse.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scripts/player/playerMovementMouse.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -137,6 +135,7 @@
       <workItem from="1700777401490" duration="4448000" />
       <workItem from="1701029016988" duration="6104000" />
       <workItem from="1701210921718" duration="2441000" />
+      <workItem from="1701462137535" duration="4190000" />
     </task>
     <task id="LOCAL-00001" summary="delete scripts errors">
       <option name="closed" value="true" />
@@ -226,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701179175816</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="lava and healthbar follow enemy">
+      <option name="closed" value="true" />
+      <created>1701382524864</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1701382524864</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +266,7 @@
     <MESSAGE value="trying change animators controllers" />
     <MESSAGE value="update" />
     <MESSAGE value="enemy follow" />
-    <option name="LAST_COMMIT_MESSAGE" value="enemy follow" />
+    <MESSAGE value="lava and healthbar follow enemy" />
+    <option name="LAST_COMMIT_MESSAGE" value="lava and healthbar follow enemy" />
   </component>
 </project>
