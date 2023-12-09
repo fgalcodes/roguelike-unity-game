@@ -19,8 +19,8 @@ TagManager:
   - GunFlash
   - Enemigo
   - Bullet
-  - Rooms
   - SpawnPoint
+  - Rooms
   layers:
   - Default
   - TransparentFX
