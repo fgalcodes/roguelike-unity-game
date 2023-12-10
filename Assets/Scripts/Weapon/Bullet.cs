@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,9 +28,16 @@ public class Bullet : MonoBehaviour
                 break;
             case "Wall":
                 gameObject.SetActive(false);
+                Debug.Log("trigger");
                 //Destroy(gameObject);
                 break;
 
         }
+    }
+    // escoger por trigger o collision
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        Debug.Log("Hey");
+        gameObject.SetActive(false);
     }
 }

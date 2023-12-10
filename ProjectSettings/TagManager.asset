@@ -21,6 +21,7 @@ TagManager:
   - Bullet
   - SpawnPoint
   - Rooms
+  - No
   layers:
   - Default
   - TransparentFX

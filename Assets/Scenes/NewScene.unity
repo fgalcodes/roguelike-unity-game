@@ -1082,26 +1082,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2791618576193350967, guid: 9f10f956d96756a468415c73119da4e3,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 0f6a638c324a35b4581fbc7159197458, type: 2}
-    - target: {fileID: 3208002170838575193, guid: 9f10f956d96756a468415c73119da4e3,
-        type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3208002170838575193, guid: 9f10f956d96756a468415c73119da4e3,
-        type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3208002170838575193, guid: 9f10f956d96756a468415c73119da4e3,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 4978214490636451825, guid: 9f10f956d96756a468415c73119da4e3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1162,28 +1142,11 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 688715738}
-    - target: {fileID: 7675363900348281572, guid: 9f10f956d96756a468415c73119da4e3,
-        type: 3}
-      propertyPath: axis
-      value: 
-      objectReference: {fileID: 1904516156}
-    - target: {fileID: 7675363900348281572, guid: 9f10f956d96756a468415c73119da4e3,
-        type: 3}
-      propertyPath: moveSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5807098937264155099, guid: 9f10f956d96756a468415c73119da4e3, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f10f956d96756a468415c73119da4e3, type: 3}
---- !u!4 &1904516156 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4978214490636451825, guid: 9f10f956d96756a468415c73119da4e3,
-    type: 3}
-  m_PrefabInstance: {fileID: 1904516155}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1971544821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1242,16 +1205,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
-    - target: {fileID: 1312447791171746838, guid: 53b0673824a7f7241b2960a7e8b22a2d,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1904516156}
-    - target: {fileID: 1312447791171746838, guid: 53b0673824a7f7241b2960a7e8b22a2d,
-        type: 3}
-      propertyPath: healthBar
-      value: 
-      objectReference: {fileID: 5826043378377407623}
     - target: {fileID: 4211047404648789457, guid: 53b0673824a7f7241b2960a7e8b22a2d,
         type: 3}
       propertyPath: m_Name
@@ -1261,21 +1214,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6421534360680468663, guid: 53b0673824a7f7241b2960a7e8b22a2d,
-        type: 3}
-      propertyPath: m_BodyType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6421534360680468663, guid: 53b0673824a7f7241b2960a7e8b22a2d,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9154273846606236405, guid: 53b0673824a7f7241b2960a7e8b22a2d,
-        type: 3}
-      propertyPath: m_Material
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9065,18 +9003,6 @@ CompositeCollider2D:
   m_OffsetDistance: 0
   m_UseDelaunayMesh: 0
   m_CompositeGameObject: {fileID: 3465479339708894176}
---- !u!114 &5826043378377407623 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7078408330096478539, guid: 53b0673824a7f7241b2960a7e8b22a2d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1971544821}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b669870ad5ac553469c3efbef9f21223, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1839735485 &6070606680832704030
 Tilemap:
   m_ObjectHideFlags: 0

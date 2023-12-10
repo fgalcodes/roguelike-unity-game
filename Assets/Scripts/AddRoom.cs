@@ -7,6 +7,6 @@ public class AddRoom : MonoBehaviour {
 	void Start(){
 		
 		// RoomTemplates.AddRoom(gameObject);
-
+	
 	}
 }
