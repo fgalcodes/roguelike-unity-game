@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06b54455-30f4-4935-bbca-fe1fadb957a6" name="Changes" comment="Dungeon generator">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.roguelike-unity-game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.roguelike-unity-game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/EntryRoom.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/EntryRoom.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Zombie2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Zombie2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dungeon.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dungeon.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AddRoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AddRoom.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-    </list>
+    <list default="true" id="06b54455-30f4-4935-bbca-fe1fadb957a6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,6 +42,7 @@
     <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scenes/NewScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scenes/Tutorial.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scenes/Tutorial.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scripts/AddRoom.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scripts/AddRoom.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scripts/AddRoom.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scripts/Destroyer.cs" root0="SKIP_HIGHLIGHTING" />
@@ -252,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702156049064</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Painting map">
+      <option name="closed" value="true" />
+      <created>1702166407664</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1702166407664</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +286,7 @@
     <MESSAGE value="enemy follow" />
     <MESSAGE value="lava and healthbar follow enemy" />
     <MESSAGE value="Dungeon generator" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dungeon generator" />
+    <MESSAGE value="Painting map" />
+    <option name="LAST_COMMIT_MESSAGE" value="Painting map" />
   </component>
 </project>
