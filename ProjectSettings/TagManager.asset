@@ -21,7 +21,8 @@ TagManager:
   - Bullet
   - SpawnPoint
   - Rooms
-  - No
+  - Key
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -64,4 +65,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Decoration
+    uniqueID: 1488395245
     locked: 0
