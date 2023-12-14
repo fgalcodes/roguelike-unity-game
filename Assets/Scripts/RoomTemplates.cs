@@ -11,11 +11,4 @@ public class RoomTemplates : MonoBehaviour {
 
 	public GameObject closedRoom;
 
-	public static List<GameObject> rooms;
-
-
-	public static void AddRoom(GameObject other)
-	{
-		rooms.Add(other);
-	}
 }

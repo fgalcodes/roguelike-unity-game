@@ -23,6 +23,8 @@ TagManager:
   - Rooms
   - Key
   - Door
+  - RoomVariant
+  - Room
   layers:
   - Default
   - TransparentFX
