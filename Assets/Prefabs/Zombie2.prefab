@@ -47,7 +47,7 @@ Animator:
   m_GameObject: {fileID: 4211047404648789457}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7ad034a4a9ac54646b971b639c7c1af0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3a7223d792f345f4fbe365b986b70ca3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -126,7 +126,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: 21300000, guid: 938b557497159b7469619e35cf365079, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bfd0034376f38ee43b4e5704624917e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -149,8 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 770b53cc05666c74da6431a8d43d27cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
-  maxHealth: 100
+  moveSpeed: 6
+  maxHealth: 10
   healthBar: {fileID: 7078408330096478539}
   bloodEffectPrefab: {fileID: 1178629327815978777, guid: 2125eea333fdda24d89ed76bbde58121,
     type: 3}
@@ -192,7 +192,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.8538462, y: 1.7076923}
+    oldSize: {x: 5.12, y: 5.12}
     newSize: {x: 2.41, y: 2.22}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -209,6 +209,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 533619785744831196}
     m_Modifications:
+    - target: {fileID: 3486884903108330936, guid: eb86ee0a3fe87a643bbc4fe71d08ad5f,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5320568368098294712, guid: eb86ee0a3fe87a643bbc4fe71d08ad5f,
         type: 3}
       propertyPath: m_Name
