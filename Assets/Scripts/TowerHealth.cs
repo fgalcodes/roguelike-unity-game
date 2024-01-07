@@ -5,7 +5,7 @@ using UnityEngine;
 public class TowerHealth : MonoBehaviour
 {
 
-    [SerializeField] private float maxHealth = 100f;
+    //[SerializeField] private float maxHealth = 100f;
     private float currentHealth;
 
     public void TomarDaño(float daño)

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -40,4 +41,11 @@ public class GolpePersonaje : MonoBehaviour
         canTakeDamage = true; // Permite recibir daño después del tiempo de cooldown
     }
 
+    // Método para aumentar la vida del personaje
+    public void AumentarVida(int cantidad)
+    {
+        vidas += cantidad;
+        sliderVidas.value = vidas;
+        //Debug.Log("Vida aumentada en: " + cantidad);
+    }
 }

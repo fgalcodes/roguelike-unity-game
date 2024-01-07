@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 public class ObjectController : MonoBehaviour, IPointerDownHandler
 {
     public int precio = 2;
-    int cantidad = 1;
     public GameObject playerUsableItem;
     GameObject player;
     
@@ -24,14 +23,26 @@ public class ObjectController : MonoBehaviour, IPointerDownHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         int monedasDisponibles = player.GetComponent<GoldController>().coins;
-        if (monedasDisponibles >= precio)
+        GameObject PanelInventoryPlayer = GameObject.Find("PanelInventoryPlayer");
+        bool inventarioLleno = true;
+
+        // Verificar si hay al menos un espacio vacío en el inventario
+        for (int a = 0; a < 5; a++)
+        {
+            if (PanelInventoryPlayer.transform.GetChild(a).childCount < 1)
+            {
+                inventarioLleno = false;
+                break;
+            }
+        }
+
+        // Si hay espacios disponibles y dinero suficiente, realizar la compra
+        if (!inventarioLleno && monedasDisponibles >= precio)
         {
             monedasDisponibles -= precio;
             player.GetComponent<GoldController>().coins = monedasDisponibles;
 
-            GameObject PanelInventoryPlayer = GameObject.Find("PanelInventoryPlayer");
-
-            for (int a = 0; a<5; a++)
+            for (int a = 0; a < 5; a++)
             {
                 if (PanelInventoryPlayer.transform.GetChild(a).childCount < 1)
                 {
