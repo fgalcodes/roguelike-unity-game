@@ -155,6 +155,8 @@ MonoBehaviour:
   bloodEffectPrefab: {fileID: 1178629327815978777, guid: 2125eea333fdda24d89ed76bbde58121,
     type: 3}
   bloodDuration: 30
+  goldPrefab: {fileID: 4857954240331179390, guid: 95a5d290c5e335940bbd7d1799161ffb,
+    type: 3}
   currentState: 0
 --- !u!61 &9154273846606236405
 BoxCollider2D:

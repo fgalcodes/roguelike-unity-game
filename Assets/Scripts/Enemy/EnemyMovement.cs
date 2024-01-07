@@ -18,6 +18,7 @@ public class EnemiMovement : MonoBehaviour
     public float bloodDuration = 60f;
 
     private GameObject playerObject;
+    public GameObject goldPrefab;
 
     private Animator animator;
 
@@ -138,6 +139,11 @@ public class EnemiMovement : MonoBehaviour
         {
             BloodEffect blood = Instantiate(bloodEffectPrefab, transform.position, Quaternion.identity);
             blood.ShowBloodEffect(transform.position, bloodDuration);
+        }
+
+        if (goldPrefab != null)
+        {
+            Instantiate(goldPrefab, transform.position, Quaternion.identity);
         }
 
         Destroy(gameObject);
