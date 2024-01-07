@@ -21,8 +21,13 @@ public class GoldController : MonoBehaviour
         {
             coins++;
             AudioSource.PlayClipAtPoint(collectedSound, transform.position);
-            texto.GetComponent<TextMeshProUGUI>().SetText(coins + "");
+            RefreshUI();
             Destroy(collision.gameObject);
         }
+    }
+
+    public void RefreshUI()
+    {
+        texto.GetComponent<TextMeshProUGUI>().SetText(coins + "");
     }
 }
