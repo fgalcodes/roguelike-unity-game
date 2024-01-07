@@ -25,6 +25,8 @@ TagManager:
   - Door
   - RoomVariant
   - Room
+  - Shop
+  - Coin
   layers:
   - Default
   - TransparentFX
