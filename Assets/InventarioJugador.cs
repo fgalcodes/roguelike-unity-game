@@ -3,14 +3,19 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class InventarioJugador : MonoBehaviour
 {
     GameObject PanelInventoryPlayer;
+    KeyInventory playerKeys;
+
+    public TMP_Text numberKeyText;
 
     void Start()
     {
         PanelInventoryPlayer = GameObject.Find("PanelInventoryPlayer");
+        playerKeys = GetComponent<KeyInventory>();
     }
 
     void Update()
@@ -54,6 +59,15 @@ public class InventarioJugador : MonoBehaviour
                 player.GetComponent<GolpePersonaje>().AumentarVida(10); // Aumentar la vida del jugador
 
                 Destroy(objeto); // Destruir el objeto del inventario
+            }
+            else if (nombrePrefab == "key") // Comprobar si el nombre del prefab es "Key"
+            {
+                UnityEngine.Debug.Log("¡Se detectó una llave!");
+
+                playerKeys = GameObject.Find("Player").GetComponent<KeyInventory>();
+                playerKeys.playerKeys.keys++;
+                playerKeys.UpdateKeyText();
+                Destroy(objeto);
             }
         }
     }

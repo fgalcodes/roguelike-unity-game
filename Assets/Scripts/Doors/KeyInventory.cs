@@ -10,13 +10,13 @@ public class KeyInventory : MonoBehaviour
     public TMP_Text numberKeyText;
 
 
-    private void Awake()
+    public void Awake()
     {
         playerKeys.keys = 0;
         UpdateKeyText();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Key"))
         {
@@ -30,7 +30,7 @@ public class KeyInventory : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Door") && playerKeys.keys > 0)
         {
@@ -44,7 +44,7 @@ public class KeyInventory : MonoBehaviour
         }
     }
     
-    private void UpdateKeyText()
+    public void UpdateKeyText()
     {
         if (numberKeyText != null)
         {
