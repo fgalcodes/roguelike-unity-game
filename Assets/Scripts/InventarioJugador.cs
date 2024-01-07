@@ -45,22 +45,22 @@ public class InventarioJugador : MonoBehaviour
     void UsarObjeto(int indiceRanura)
     {
 
-        Transform slot = PanelInventoryPlayer.transform.GetChild(indiceRanura); // Obtener el slot del inventario
+        Transform slot = PanelInventoryPlayer.transform.GetChild(indiceRanura);
 
-        if (slot.childCount > 0) // Verificar si hay un objeto en el slot
+        if (slot.childCount > 0)
         {
-            GameObject objeto = slot.GetChild(0).gameObject; // Obtener el primer objeto del slot
+            GameObject objeto = slot.GetChild(0).gameObject;
 
-            string nombrePrefab = objeto.name.Replace("(Clone)", "").Trim(); // Obtener el nombre del prefab y eliminar "(Clone)"
+            string nombrePrefab = objeto.name.Replace("(Clone)", "").Trim();
 
-            if (nombrePrefab == "Potion") // Comprobar si el nombre del prefab es "Potion"
+            if (nombrePrefab == "Potion")
             {
                 GameObject player = GameObject.Find("Player");
-                player.GetComponent<GolpePersonaje>().AumentarVida(10); // Aumentar la vida del jugador
+                player.GetComponent<GolpePersonaje>().AumentarVida(10);
 
-                Destroy(objeto); // Destruir el objeto del inventario
+                Destroy(objeto);
             }
-            else if (nombrePrefab == "key") // Comprobar si el nombre del prefab es "Key"
+            else if (nombrePrefab == "key")
             {
                 UnityEngine.Debug.Log("¡Se detectó una llave!");
 

@@ -24,6 +24,8 @@ public class EnemiMovement : MonoBehaviour
 
     private bool isAttacking = false;
 
+    private AudioSource audioSource;
+
     public enum States
     {
         Run,
@@ -44,6 +46,13 @@ public class EnemiMovement : MonoBehaviour
         if (healthBar != null)
         {
             healthBar.UpdateHealthbar(maxHealth, currentHealth, currentHealth);
+        }
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource != null && audioSource.clip != null)
+        {
+            audioSource.loop = true;
+            audioSource.Play();
         }
     }
 
@@ -88,6 +97,14 @@ public class EnemiMovement : MonoBehaviour
     }
     void moveCharacter(Vector2 direction)
     {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 0.1f); // Raycast en la dirección de movimiento
+
+        if (hit.collider != null && hit.collider.CompareTag("Wall")) // Comprueba si el Raycast choca con una pared
+        {
+            // Si el Raycast colisiona con una pared, no se mueve en esa dirección
+            return;
+        }
+
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
 
