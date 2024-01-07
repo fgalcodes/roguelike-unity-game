@@ -2132,7 +2132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd3b7d0ca0870f41bc26132a6b31ce8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  precio: 1
+  precio: 15
   playerUsableItem: {fileID: 5248924348089708680, guid: 3698b6ba523a9a6409246c8acd21e6fe,
     type: 3}
 --- !u!114 &1057665984
@@ -9361,7 +9361,7 @@ GameObject:
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6294216307686111539
 Transform:
   m_ObjectHideFlags: 0
