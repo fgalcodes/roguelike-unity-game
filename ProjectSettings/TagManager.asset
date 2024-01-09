@@ -17,6 +17,14 @@ TagManager:
   - SmokeTrail
   - Spawner
   - GunFlash
+  - Enemigo
+  - Bullet
+  - SpawnPoint
+  - Rooms
+  - Key
+  - Door
+  - RoomVariant
+  - Room
   layers:
   - Default
   - TransparentFX
@@ -51,12 +59,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: ScrollingBackground
+    uniqueID: 920072061
+    locked: 0
+  - name: Floor
+    uniqueID: 938257443
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Floor
-    uniqueID: 2226256539
-    locked: 0
-  - name: Wall
-    uniqueID: 2564648397
+  - name: Decoration
+    uniqueID: 1488395245
     locked: 0

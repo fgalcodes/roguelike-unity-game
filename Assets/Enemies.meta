@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefabs/Ground.meta
+guid: b77bc11356756e646b9288afb4f7ee4a
+========
+guid: d79f7e0ff958b1646874a3c290e7be45
+>>>>>>>> dev-fabian:Assets/Enemies.meta
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
