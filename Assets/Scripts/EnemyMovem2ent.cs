@@ -69,4 +69,21 @@ public class EnemiMovement2 : MonoBehaviour
 
         Destroy(gameObject);
     }
+
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Player"))
+    //    {
+    //        // Obtener el componente PlayerMovement (o el que corresponda)
+    //        PlayerMovement playerMovement = collision.gameObject.GetComponent<PlayerMovement>();
+
+    //        if (playerMovement != null)
+    //        {
+    //            // Llamar al método TomarDaño del jugador o hacer cualquier otra acción
+    //            playerMovement.TomarDaño(daño); // O cualquier método para hacer daño al jugador
+    //        }
+
+    //        DestroyEnemy(); // Destruir al enemigo cuando colisiona con el jugador
+    //    }
+    //}
 }

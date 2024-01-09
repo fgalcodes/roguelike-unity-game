@@ -277,6 +277,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PonitEnemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8267908506685802237, guid: c3c78c62f0f5f5f4294500035dc8e3a9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1435,6 +1440,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PonitEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8267908506685802237, guid: c3c78c62f0f5f5f4294500035dc8e3a9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1950,7 +1960,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1070408159
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3152,6 +3162,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PonitEnemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8267908506685802237, guid: c3c78c62f0f5f5f4294500035dc8e3a9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3683,6 +3698,89 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1673714973}
   m_CullTransparentMesh: 1
+--- !u!1001 &1735698999
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6494230784873289991, guid: 67c46421d06fd3e4aabfb7f069fabea9,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 5338212716275354919}
+    - target: {fileID: 6494230784873289991, guid: 67c46421d06fd3e4aabfb7f069fabea9,
+        type: 3}
+      propertyPath: maxHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852197102990805940, guid: 67c46421d06fd3e4aabfb7f069fabea9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.0671475
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852197102990805940, guid: 67c46421d06fd3e4aabfb7f069fabea9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.669015
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852197102990805940, guid: 67c46421d06fd3e4aabfb7f069fabea9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852197102990805940, guid: 67c46421d06fd3e4aabfb7f069fabea9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852197102990805940, guid: 67c46421d06fd3e4aabfb7f069fabea9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852197102990805940, guid: 67c46421d06fd3e4aabfb7f069fabea9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852197102990805940, guid: 67c46421d06fd3e4aabfb7f069fabea9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852197102990805940, guid: 67c46421d06fd3e4aabfb7f069fabea9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852197102990805940, guid: 67c46421d06fd3e4aabfb7f069fabea9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852197102990805940, guid: 67c46421d06fd3e4aabfb7f069fabea9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9071145367917675707, guid: 67c46421d06fd3e4aabfb7f069fabea9,
+        type: 3}
+      propertyPath: m_Name
+      value: ZombieExplosive
+      objectReference: {fileID: 0}
+    - target: {fileID: 9071145367917675707, guid: 67c46421d06fd3e4aabfb7f069fabea9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 67c46421d06fd3e4aabfb7f069fabea9, type: 3}
 --- !u!1 &1792360507
 GameObject:
   m_ObjectHideFlags: 0
@@ -3827,6 +3925,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PonitEnemy (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8267908506685802237, guid: c3c78c62f0f5f5f4294500035dc8e3a9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13811,3 +13914,4 @@ SceneRoots:
   - {fileID: 1540717220}
   - {fileID: 3894748114592655882}
   - {fileID: 370403965}
+  - {fileID: 1735698999}
