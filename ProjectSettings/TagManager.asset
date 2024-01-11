@@ -28,6 +28,7 @@ TagManager:
   - Shop
   - Coin
   - Tower
+  - EnemigoExplosivo
   layers:
   - Default
   - TransparentFX

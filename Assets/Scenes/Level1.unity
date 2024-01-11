@@ -1349,12 +1349,12 @@ PrefabInstance:
     - target: {fileID: 8266958375947592033, guid: d695dff433bd85342b7595103e8e8333,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8266958375947592033, guid: d695dff433bd85342b7595103e8e8333,
         type: 3}
       propertyPath: m_TagString
-      value: Enemigo
+      value: Tower
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4191,6 +4191,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2010150853}
   m_CullTransparentMesh: 1
+--- !u!1001 &2035551599
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 533619785744831196, guid: cb53ead644f9ae44fb3d791df2d9c99f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 533619785744831196, guid: cb53ead644f9ae44fb3d791df2d9c99f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 533619785744831196, guid: cb53ead644f9ae44fb3d791df2d9c99f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 533619785744831196, guid: cb53ead644f9ae44fb3d791df2d9c99f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 533619785744831196, guid: cb53ead644f9ae44fb3d791df2d9c99f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 533619785744831196, guid: cb53ead644f9ae44fb3d791df2d9c99f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 533619785744831196, guid: cb53ead644f9ae44fb3d791df2d9c99f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 533619785744831196, guid: cb53ead644f9ae44fb3d791df2d9c99f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 533619785744831196, guid: cb53ead644f9ae44fb3d791df2d9c99f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 533619785744831196, guid: cb53ead644f9ae44fb3d791df2d9c99f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4211047404648789457, guid: cb53ead644f9ae44fb3d791df2d9c99f,
+        type: 3}
+      propertyPath: m_Name
+      value: Zombie2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cb53ead644f9ae44fb3d791df2d9c99f, type: 3}
 --- !u!1 &2138337762
 GameObject:
   m_ObjectHideFlags: 0
@@ -9992,6 +10060,7 @@ MonoBehaviour:
     type: 3}
   explosionRadius: 2
   explosionDamage: 10
+  stateExplosion: 0
 --- !u!50 &6538813064399942259
 Rigidbody2D:
   serializedVersion: 4
@@ -14599,7 +14668,7 @@ GameObject:
   - component: {fileID: 6494230785362989942}
   m_Layer: 0
   m_Name: ZombieExplosive
-  m_TagString: Enemigo
+  m_TagString: EnemigoExplosivo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14700,3 +14769,4 @@ SceneRoots:
   - {fileID: 3894748114592655882}
   - {fileID: 370403965}
   - {fileID: 6852197101293175237}
+  - {fileID: 2035551599}

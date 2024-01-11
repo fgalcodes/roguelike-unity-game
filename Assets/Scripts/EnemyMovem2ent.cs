@@ -19,8 +19,9 @@ public class EnemiMovement2 : MonoBehaviour
 
     public GameObject explosionPrefab; // Prefab de la explosión
     public float explosionRadius = 2f; // Radio de la explosión
-    public int explosionDamage = 10; // Daño de la explosión
+    public int explosionDamage = 100; // Daño de la explosión
 
+    public bool stateExplosion = false;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -39,6 +40,7 @@ public class EnemiMovement2 : MonoBehaviour
         rb.rotation = angle;
         direction.Normalize();
         movement = direction;
+
     }
 
     private void FixedUpdate()
@@ -58,6 +60,8 @@ public class EnemiMovement2 : MonoBehaviour
         if (currentHealth <= 0)
         {
             Explode(); // Llamar a la función Explode cuando la salud llega a cero
+            Destroy(gameObject);
+
         }
 
         if (healthBar != null)
@@ -94,7 +98,7 @@ public class EnemiMovement2 : MonoBehaviour
             else if (collider.CompareTag("Enemigo") && collider.gameObject != gameObject)
             {
                 // Obtener el componente EnemiMovement2 del enemigo cercano
-                EnemiMovement2 enemyScript = collider.GetComponent<EnemiMovement2>();
+                EnemiMovement enemyScript = collider.GetComponent<EnemiMovement>();
 
                 if (enemyScript != null)
                 {
@@ -105,6 +109,13 @@ public class EnemiMovement2 : MonoBehaviour
         }
 
         // Destruir el objeto actual (enemigo explosivo)
-        Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Explode();
+        }
     }
 }

@@ -26,7 +26,7 @@ public class GolpePersonaje : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (canTakeDamage && collision.gameObject.CompareTag("Enemigo"))
+        if (canTakeDamage && collision.gameObject.CompareTag("Enemigo") || canTakeDamage && collision.gameObject.CompareTag("Tower"))
         {
             vidas--;
             sliderVidas.value = vidas;
