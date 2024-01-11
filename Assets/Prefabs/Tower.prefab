@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 6343726679644066166}
   m_Layer: 0
   m_Name: Tower
-  m_TagString: Enemigo
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -276,3 +276,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46bfe2d5b1e5dd24d9b8c4ee33c1f3c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 200

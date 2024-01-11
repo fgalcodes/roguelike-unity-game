@@ -27,6 +27,7 @@ TagManager:
   - Room
   - Shop
   - Coin
+  - Tower
   layers:
   - Default
   - TransparentFX
