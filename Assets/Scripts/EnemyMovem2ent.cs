@@ -17,6 +17,10 @@ public class EnemiMovement2 : MonoBehaviour
     public BloodEffect bloodEffect;
     public float bloodDuration = 60f;
 
+    public GameObject explosionPrefab; // Prefab de la explosión
+    public float explosionRadius = 2f; // Radio de la explosión
+    public int explosionDamage = 10; // Daño de la explosión
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -36,11 +40,13 @@ public class EnemiMovement2 : MonoBehaviour
         direction.Normalize();
         movement = direction;
     }
+
     private void FixedUpdate()
     {
-        moveCharacter(movement);
+        MoveCharacter(movement);
     }
-    void moveCharacter(Vector2 direction)
+
+    void MoveCharacter(Vector2 direction)
     {
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
@@ -51,7 +57,7 @@ public class EnemiMovement2 : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            DestroyEnemy();
+            Explode(); // Llamar a la función Explode cuando la salud llega a cero
         }
 
         if (healthBar != null)
@@ -59,31 +65,46 @@ public class EnemiMovement2 : MonoBehaviour
             healthBar.UpdateHealthbar(maxHealth, currentHealth, currentHealth + daño);
         }
     }
-    void DestroyEnemy()
-    {
 
+    void Explode()
+    {
         if (bloodEffect != null)
         {
             bloodEffect.ShowBloodEffect(transform.position, bloodDuration);
         }
 
+        // Crear la explosión
+        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+
+        // Aplicar daño a los objetos dentro del radio de la explosión
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("Player"))
+            {
+                // Obtener el componente GolpePersonaje
+                GolpePersonaje playerScript = collider.GetComponent<GolpePersonaje>();
+
+                if (playerScript != null)
+                {
+                    // Aplicar daño al jugador
+                    playerScript.TomarDaño(explosionDamage);
+                }
+            }
+            else if (collider.CompareTag("Enemigo") && collider.gameObject != gameObject)
+            {
+                // Obtener el componente EnemiMovement2 del enemigo cercano
+                EnemiMovement2 enemyScript = collider.GetComponent<EnemiMovement2>();
+
+                if (enemyScript != null)
+                {
+                    // Aplicar daño al enemigo cercano
+                    enemyScript.TomarDaño(explosionDamage);
+                }
+            }
+        }
+
+        // Destruir el objeto actual (enemigo explosivo)
         Destroy(gameObject);
     }
-
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Player"))
-    //    {
-    //        // Obtener el componente PlayerMovement (o el que corresponda)
-    //        PlayerMovement playerMovement = collision.gameObject.GetComponent<PlayerMovement>();
-
-    //        if (playerMovement != null)
-    //        {
-    //            // Llamar al método TomarDaño del jugador o hacer cualquier otra acción
-    //            playerMovement.TomarDaño(daño); // O cualquier método para hacer daño al jugador
-    //        }
-
-    //        DestroyEnemy(); // Destruir al enemigo cuando colisiona con el jugador
-    //    }
-    //}
 }

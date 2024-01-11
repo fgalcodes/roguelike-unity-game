@@ -49,6 +49,22 @@ public class GolpePersonaje : MonoBehaviour
         canTakeDamage = true; // Permite recibir daño después del tiempo de cooldown
     }
 
+    public void TomarDaño(int cantidad)
+    {
+        vidas -= cantidad;
+        sliderVidas.value = vidas;
+        canTakeDamage = false; // Desactiva la capacidad de recibir daño temporalmente
+
+        if (vidas <= 0)
+        {
+            Time.timeScale = 0f;
+            gameOverPanel.SetActive(true);
+            shootScript.enabled = false;
+        }
+
+        StartCoroutine(EnableDamageAfterCooldown());
+    }
+
     // Método para aumentar la vida del personaje
     public void AumentarVida(int cantidad)
     {
