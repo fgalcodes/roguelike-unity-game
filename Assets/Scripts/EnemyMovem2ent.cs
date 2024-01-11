@@ -116,6 +116,7 @@ public class EnemiMovement2 : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Explode();
+            Destroy(gameObject);
         }
     }
 }

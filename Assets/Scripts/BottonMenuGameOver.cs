@@ -8,13 +8,13 @@ public class BottonMenuGameOver : MonoBehaviour
     // Método para reiniciar el nivel
     public void RestartLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reiniciar el nivel actual
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     // Método para volver al menú principal
     public void BackToMenu()
     {
-        SceneManager.LoadScene("Menu"); // Cargar la escena del menú principal
+        SceneManager.LoadScene("Menu");
     }
 
     // Método para salir del juego

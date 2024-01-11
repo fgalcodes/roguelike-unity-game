@@ -7,7 +7,7 @@ public class timeExplosion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(TimeToExplode(3f));
+        StartCoroutine(TimeToExplode(1f));
     }
 
    IEnumerator TimeToExplode(float duration)
