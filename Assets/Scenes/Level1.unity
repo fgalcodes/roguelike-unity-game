@@ -4254,6 +4254,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie2
       objectReference: {fileID: 0}
+    - target: {fileID: 4211047404648789457, guid: cb53ead644f9ae44fb3d791df2d9c99f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10053,13 +10058,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 5338212716275354919}
   moveSpeed: 4
-  maxHealth: 100
+  maxHealth: 50
   bloodEffect: {fileID: 7761024950831315333}
   bloodDuration: 60
   explosionPrefab: {fileID: 4324189087172279163, guid: 02f714fa49568b04d911dbbe9e87f91a,
     type: 3}
   explosionRadius: 2
-  explosionDamage: 10
+  explosionDamage: 50
   stateExplosion: 0
 --- !u!50 &6538813064399942259
 Rigidbody2D:
