@@ -74,7 +74,7 @@ public class playerMovementMouse : MonoBehaviour
     IEnumerator ResetIsMelee()
     {
         // Ajusta el tiempo según la duración de la animación Melee
-        yield return new WaitForSeconds(0.50f + 0.1f);
+        yield return new WaitForSeconds(1f + 0.1f);
         animator.SetBool("isMelee", false);
         isMeleeAttacking = false;
     }
@@ -86,5 +86,10 @@ public class playerMovementMouse : MonoBehaviour
             animator.SetBool("isShooting", value);
             isShooting = value;
         }
+    }
+
+    public bool IsMeleeAttacking()
+    {
+        return isMeleeAttacking;
     }
 }

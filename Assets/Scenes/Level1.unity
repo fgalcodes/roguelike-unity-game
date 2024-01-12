@@ -8697,7 +8697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon:
-  - {fileID: 9100000, guid: 78913cf0fb0862d4696611e6fa981a26, type: 2}
+  - {fileID: 9100000, guid: 251244245aa6f69428b36bdb1e473d90, type: 2}
   - {fileID: 9100000, guid: e6be897155a65904cb0a033af8ab00f1, type: 2}
   - {fileID: 9100000, guid: 689cb37e5f7978048aa22a8341fc0bb9, type: 2}
   - {fileID: 9100000, guid: 6af1a78d64a1bd749b41486e76b256a3, type: 2}

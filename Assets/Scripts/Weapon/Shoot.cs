@@ -17,11 +17,15 @@ public class Shoot : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Shooting();
-
-            if (playerMovement != null)
+            // Solo dispara si no se está realizando la animación Melee
+            if (!playerMovement.IsMeleeAttacking())
             {
-                playerMovement.SetIsShooting(true);
+                Shooting();
+
+                if (playerMovement != null)
+                {
+                    playerMovement.SetIsShooting(true);
+                }
             }
         }
     }
