@@ -33,5 +33,6 @@ public class playerMovementMouse : MonoBehaviour
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg + 5f;
         rb.rotation = angle;
 
+
     }
 }
