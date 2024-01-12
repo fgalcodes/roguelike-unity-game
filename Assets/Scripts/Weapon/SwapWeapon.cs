@@ -9,6 +9,8 @@ public class SwapWeapon : MonoBehaviour
 
     private int index = 0;
 
+    public bool isMelee = false;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -31,10 +33,11 @@ public class SwapWeapon : MonoBehaviour
             index--;
         }
 
+        if (index == 0)
+        {
+            isMelee = true;
+        }
         if (index > weapon.Length -1) index--;
         if (index < 0 ) index++;
-        
-
     }
-
 }
