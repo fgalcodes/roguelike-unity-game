@@ -24,9 +24,10 @@ public class GolpePersonaje : MonoBehaviour
         shootScript.enabled = true;
     }
 
+
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (canTakeDamage && collision.gameObject.CompareTag("Enemigo") || canTakeDamage && collision.gameObject.CompareTag("Tower"))
+        if (canTakeDamage && collision.gameObject.CompareTag("Enemigo"))
         {
             vidas--;
             sliderVidas.value = vidas;
