@@ -280,7 +280,7 @@ PrefabInstance:
     - target: {fileID: 8267908506685802237, guid: c3c78c62f0f5f5f4294500035dc8e3a9,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1349,7 +1349,7 @@ PrefabInstance:
     - target: {fileID: 8266958375947592033, guid: d695dff433bd85342b7595103e8e8333,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8266958375947592033, guid: d695dff433bd85342b7595103e8e8333,
         type: 3}
@@ -1443,7 +1443,7 @@ PrefabInstance:
     - target: {fileID: 8267908506685802237, guid: c3c78c62f0f5f5f4294500035dc8e3a9,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3165,7 +3165,7 @@ PrefabInstance:
     - target: {fileID: 8267908506685802237, guid: c3c78c62f0f5f5f4294500035dc8e3a9,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3846,7 +3846,7 @@ PrefabInstance:
     - target: {fileID: 8267908506685802237, guid: c3c78c62f0f5f5f4294500035dc8e3a9,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6987,6 +6987,8 @@ MonoBehaviour:
   moveSpeed: 5
   rb: {fileID: 3627687970042375531}
   cam: {fileID: 792469878682703664}
+  animator: {fileID: 9166266062356770068}
+  swapWeapon: {fileID: 6419758546040294860}
 --- !u!114 &1595596904958822176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7641,6 +7643,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ZombieExplosive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921997309923235009, guid: 91d62a56735937a4cb02342478c2af7c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8694,6 +8701,7 @@ MonoBehaviour:
   - {fileID: 9100000, guid: e6be897155a65904cb0a033af8ab00f1, type: 2}
   - {fileID: 9100000, guid: 689cb37e5f7978048aa22a8341fc0bb9, type: 2}
   - {fileID: 9100000, guid: 6af1a78d64a1bd749b41486e76b256a3, type: 2}
+  animator: {fileID: 0}
 --- !u!50 &6538813064399942259
 Rigidbody2D:
   serializedVersion: 4
@@ -8823,6 +8831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controladorDisparo: {fileID: 4781982660147697279}
   bullet: {fileID: 3300052460564410105, guid: 3db8e72fdecd56e4fa9fa843cae6ac61, type: 3}
+  playerMovement: {fileID: 1525407264858553443}
 --- !u!1 &7338427372283649403
 GameObject:
   m_ObjectHideFlags: 0

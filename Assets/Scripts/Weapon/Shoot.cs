@@ -6,20 +6,28 @@ public class Shoot : MonoBehaviour
 {
     [SerializeField] private Transform controladorDisparo;
     [SerializeField] private GameObject bullet;
+    [SerializeField] private playerMovementMouse playerMovement;
+
+    private void Start()
+    {
+        playerMovement = GetComponent<playerMovementMouse>();
+    }
 
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
             Shooting();
-            //isShooting(true);
+
+            if (playerMovement != null)
+            {
+                playerMovement.SetIsShooting(true);
+            }
         }
     }
 
     private void Shooting()
     {
-        //Instantiate(bullet, controladorDisparo.position, controladorDisparo.rotation);
-
         GameObject bulletPrefab = ObjectPool.instance.GetPoolObject();
 
         if (bulletPrefab != null)
