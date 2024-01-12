@@ -41,8 +41,8 @@ public class EnemyBullet : MonoBehaviour
             GolpePersonaje playerScript = other.GetComponent<GolpePersonaje>();
             if (playerScript != null)
             {
-                // Aplicar daño al jugador
-                playerScript.TomarDaño(bulletDamage);
+                // Aplicar daÃ±o al jugador
+                playerScript.TomarDaÃ±o(bulletDamage);
             }
             Destroy(gameObject);
         }
