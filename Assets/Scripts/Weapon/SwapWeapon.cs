@@ -7,6 +7,8 @@ public class SwapWeapon : MonoBehaviour
     public AnimatorController[] weapon;
     private Animator animator;
 
+    public PlayerWeapon playerWeapon;
+
     private int index = 0;
 
     private void Start()
