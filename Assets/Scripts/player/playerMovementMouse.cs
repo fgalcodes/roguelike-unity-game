@@ -31,11 +31,11 @@ public class playerMovementMouse : MonoBehaviour
         {
             if (swapWeapon.GetIndex() == 0)
             {
-                // Activa la animación Melee solo al hacer clic con el ratón
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0) && !isMeleeAttacking)
                 {
                     animator.SetBool("isMelee", true);
                     isMeleeAttacking = true;
+                    StartCoroutine(ResetIsMelee());
                 }
             }
             else
@@ -48,11 +48,6 @@ public class playerMovementMouse : MonoBehaviour
         if (isShooting)
         {
             StartCoroutine(ResetIsShooting());
-        }
-
-        if (isMeleeAttacking)
-        {
-            StartCoroutine(ResetIsMelee());
         }
     }
 
@@ -73,7 +68,6 @@ public class playerMovementMouse : MonoBehaviour
 
     IEnumerator ResetIsMelee()
     {
-        // Ajusta el tiempo según la duración de la animación Melee
         yield return new WaitForSeconds(1f + 0.1f);
         animator.SetBool("isMelee", false);
         isMeleeAttacking = false;
