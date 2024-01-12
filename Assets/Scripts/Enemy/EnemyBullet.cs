@@ -7,6 +7,7 @@ public class EnemyBullet : MonoBehaviour
     private float _timer;
 
     [SerializeField] private float force = 5;
+    [SerializeField] private int bulletDamage = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,12 @@ public class EnemyBullet : MonoBehaviour
     {
         if (!other.gameObject.CompareTag("Bullet"))
         {
+            GolpePersonaje playerScript = other.GetComponent<GolpePersonaje>();
+            if (playerScript != null)
+            {
+                // Aplicar daño al jugador
+                playerScript.TomarDaño(bulletDamage);
+            }
             Destroy(gameObject);
         }
     }
