@@ -8,13 +8,18 @@ public class ChekpointController : MonoBehaviour
     public GameObject rune;
     public GameObject glow;
 
+    public float vidaPorSegundo = 1f;
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            rune1.SetActive(false); // Desactiva el rune1
-            rune.SetActive(true);   // Activa el rune
-            glow.SetActive(true);   // Activa el glow
+            rune1.SetActive(false);
+            rune.SetActive(true);
+            glow.SetActive(true);
+
+            // Inicia la repetición de la función GanarVida cada segundo
+            InvokeRepeating("GanarVida", 0.2f, 0.2f);
         }
     }
 
@@ -22,9 +27,24 @@ public class ChekpointController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            rune1.SetActive(true);  // Activa el rune1
-            rune.SetActive(false);  // Desactiva el rune
-            glow.SetActive(false);  // Desactiva el glow
+            rune1.SetActive(true);
+            rune.SetActive(false);
+            glow.SetActive(false);
+
+            // Detiene la repetición de la función GanarVida
+            CancelInvoke("GanarVida");
+        }
+    }
+
+    private void GanarVida()
+    {
+        GameObject jugador = GameObject.FindGameObjectWithTag("Player");
+
+        GolpePersonaje golpePersonaje = jugador.GetComponent<GolpePersonaje>();
+
+        if (golpePersonaje != null)
+        {
+            golpePersonaje.AumentarVida(1);
         }
     }
 }

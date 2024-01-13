@@ -1,42 +1,47 @@
 using System;
+using System.Diagnostics;
 using UnityEditor.Animations;
 using UnityEngine;
 
 public class SwapWeapon : MonoBehaviour
 {
     public AnimatorController[] weapon;
-    private Animator animator;
-
-    public PlayerWeapon playerWeapon;
-
+    public Animator animator;
     private int index = 0;
+
+    public int GetIndex()
+    {
+        return index;
+    }
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        UpdateAnimatorController();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && !(index > weapon.Length -1))
+        if (Input.GetKeyDown(KeyCode.E) && index < weapon.Length - 1)
         {
-            Debug.Log("E");
-            animator.runtimeAnimatorController = weapon[index];
+            UnityEngine.Debug.Log("E");
             index++;
+            UpdateAnimatorController();
         }
 
-        if (Input.GetKeyDown(KeyCode.Q) && !(index < 0))
+        if (Input.GetKeyDown(KeyCode.Q) && index > 0)
         {
-            Debug.Log("Q");
-
-            animator.runtimeAnimatorController = weapon[index];
+            UnityEngine.Debug.Log("Q");
             index--;
+            UpdateAnimatorController();
         }
-
-        if (index > weapon.Length -1) index--;
-        if (index < 0 ) index++;
-        
-
     }
 
+    private void UpdateAnimatorController()
+    {
+        if (animator != null && index >= 0 && index < weapon.Length)
+        {
+            animator.runtimeAnimatorController = weapon[index];
+        }
+    }
 }
