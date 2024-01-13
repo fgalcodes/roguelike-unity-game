@@ -5,6 +5,8 @@ using UnityEngine;
 public class playerMovementMouse : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    public float meleeAttackRange = 2f; // Ajusta según sea necesario
+    public LayerMask enemyLayer;
 
     public Rigidbody2D rb;
     public Camera cam;
@@ -16,6 +18,8 @@ public class playerMovementMouse : MonoBehaviour
 
     private bool isShooting;
     private bool isMeleeAttacking;
+
+    public float daño = 10f;
 
     void Update()
     {
@@ -36,6 +40,8 @@ public class playerMovementMouse : MonoBehaviour
                     animator.SetBool("isMelee", true);
                     isMeleeAttacking = true;
                     StartCoroutine(ResetIsMelee());
+                    HandleMeleeAttack();
+                    
                 }
             }
             else
@@ -49,6 +55,13 @@ public class playerMovementMouse : MonoBehaviour
         {
             StartCoroutine(ResetIsShooting());
         }
+    }
+
+    bool IsNearEnemy()
+    {
+        Collider2D hitEnemy = Physics2D.OverlapCircle(transform.position, meleeAttackRange, enemyLayer);
+
+        return hitEnemy != null && hitEnemy.CompareTag("Enemigo");
     }
 
     void FixedUpdate()
@@ -68,9 +81,27 @@ public class playerMovementMouse : MonoBehaviour
 
     IEnumerator ResetIsMelee()
     {
-        yield return new WaitForSeconds(1f + 0.1f);
+        yield return new WaitForSeconds(0.45f + 0.1f);
         animator.SetBool("isMelee", false);
         isMeleeAttacking = false;
+    }
+
+    void HandleMeleeAttack()
+    {
+        if (IsNearEnemy())
+        {
+            Collider2D hitEnemy = Physics2D.OverlapCircle(transform.position, meleeAttackRange, enemyLayer);
+
+            if (hitEnemy != null && hitEnemy.CompareTag("Enemigo"))
+            {
+                EnemiMovement enemyScript = hitEnemy.GetComponent<EnemiMovement>();
+
+                if (enemyScript != null)
+                {
+                    enemyScript.TomarDaño(daño);
+                }
+            }
+        }
     }
 
     public void SetIsShooting(bool value)
