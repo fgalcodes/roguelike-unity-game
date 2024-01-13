@@ -5,7 +5,7 @@ using UnityEngine;
 public class playerMovementMouse : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public float meleeAttackRange = 2f; // Ajusta según sea necesario
+    public float meleeAttackRange = 2f;
     public LayerMask enemyLayer;
 
     public Rigidbody2D rb;
@@ -41,7 +41,6 @@ public class playerMovementMouse : MonoBehaviour
                     isMeleeAttacking = true;
                     StartCoroutine(ResetIsMelee());
                     HandleMeleeAttack();
-                    
                 }
             }
             else
