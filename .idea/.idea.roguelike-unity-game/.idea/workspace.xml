@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06b54455-30f4-4935-bbca-fe1fadb957a6" name="Changes" comment="" />
+    <list default="true" id="06b54455-30f4-4935-bbca-fe1fadb957a6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.roguelike-unity-game/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.roguelike-unity-game/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.roguelike-unity-game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.roguelike-unity-game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Beta.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Beta.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Beta.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Beta.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptObjects/PlayerWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptObjects/PlayerWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/SwapWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/SwapWeapon.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -138,6 +145,7 @@
       <workItem from="1701029016988" duration="6104000" />
       <workItem from="1701210921718" duration="2441000" />
       <workItem from="1701462137535" duration="4190000" />
+      <workItem from="1705238047445" duration="983000" />
     </task>
     <task id="LOCAL-00001" summary="delete scripts errors">
       <option name="closed" value="true" />
