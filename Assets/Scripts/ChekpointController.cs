@@ -18,7 +18,6 @@ public class ChekpointController : MonoBehaviour
             rune.SetActive(true);
             glow.SetActive(true);
 
-            // Inicia la repetición de la función GanarVida cada segundo
             InvokeRepeating("GanarVida", 0.2f, 0.2f);
         }
     }
@@ -31,7 +30,6 @@ public class ChekpointController : MonoBehaviour
             rune.SetActive(false);
             glow.SetActive(false);
 
-            // Detiene la repetición de la función GanarVida
             CancelInvoke("GanarVida");
         }
     }

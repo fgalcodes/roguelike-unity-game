@@ -29,6 +29,7 @@ TagManager:
   - Coin
   - Tower
   - EnemigoExplosivo
+  - Spikes
   layers:
   - Default
   - TransparentFX
@@ -41,7 +42,7 @@ TagManager:
   - Enemy
   - Enemigoo
   - Chekpoint
-  - 
+  - Spikes
   - 
   - 
   - 
