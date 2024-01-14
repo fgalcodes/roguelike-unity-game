@@ -15,11 +15,14 @@ public class DialogController : MonoBehaviour
     //private bool keyButtonClicked = false;
     private bool coinsButtonClicked = false;
 
+    private bool buttonsLocked = false;
+
     private string[] paragraphs = {
         "¡Ah, viajero intrépido!\nTe encuentras ante la encrucijada de tu destino.\nEn mi humilde puesto de comercio, ofrezco dos tesoros que pueden cambiar el rumbo de tu travesía. La elección, sin duda, marcará tu camino en esta oscura mazmorra.",
         "Opción 1 - Llave Misteriosa:\n¿Una llave, forjada en las entrañas de la antigua magia? Nadie sabe a qué puertas abre, pero dicen que detrás se ocultan secretos olvidados y riquezas inimaginables.\n¿Te atreves a desvelar los misterios que aguardan tras ella?",
         "Opción 2 - 100 Monedas:\n¿O quizás prefieras el tintineo de las monedas, brillando con la promesa de poder y gloria?\nCon cien monedas, podrías comprar el favor de los seres sombríos que moran en estas profundidades, o invertirlas sabiamente en equipo que te haga más resistente a las artimañas de la mazmorra.",
-        "Recuerda, valiente aventurero, cada elección que hagas resonará en las sombras de este laberinto. El destino te aguarda, pero solo elige sabiamente aquellos tesoros que iluminarán tu camino hacia la victoria. ¡Buena suerte!"
+        "Recuerda, valiente aventurero, cada elección que hagas resonará en las sombras de este laberinto. El destino te aguarda, pero solo elige sabiamente aquellos tesoros que iluminarán tu camino hacia la victoria. ¡Buena suerte!",
+        ""
     };
 
     private int currentParagraph = 0;
@@ -36,28 +39,47 @@ public class DialogController : MonoBehaviour
 
     public void ShowNextParagraph()
     {
+        if (!buttonsLocked)
+        {
+            buttonsLocked = true;
 
-        if (currentParagraph < paragraphs.Length - 1)
-        {
-            currentParagraph++;
-            dialogText.text = paragraphs[currentParagraph];
-            UpdateButtons();
-        }
-        else
-        {
-            dialogText.text = "";
-            UpdateButtons();
+            if (currentParagraph < paragraphs.Length - 1)
+            {
+                currentParagraph++;
+                dialogText.text = paragraphs[currentParagraph];
+                UpdateButtons();
+            }
+            else
+            {
+                dialogText.text = "";
+                UpdateButtons();
+            }
+
+            StartCoroutine(UnlockButtons());
         }
     }
 
     public void ShowPrevParagraph()
     {
-        if (currentParagraph > 0)
+        if (!buttonsLocked)
         {
-            currentParagraph--;
-            dialogText.text = paragraphs[currentParagraph];
-            UpdateButtons();
+            buttonsLocked = true;
+
+            if (currentParagraph > 0)
+            {
+                currentParagraph--;
+                dialogText.text = paragraphs[currentParagraph];
+                UpdateButtons();
+            }
+
+            StartCoroutine(UnlockButtons());
         }
+    }
+
+    IEnumerator UnlockButtons()
+    {
+        yield return new WaitForSeconds(0.5f);
+        buttonsLocked = false;
     }
 
     void ShowKey()
