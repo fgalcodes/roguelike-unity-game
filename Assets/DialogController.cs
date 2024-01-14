@@ -13,9 +13,9 @@ public class DialogController : MonoBehaviour
     public Button coinsButton;
 
     private string[] paragraphs = {
-        "¡Ah, viajero intrépido! Te encuentras ante la encrucijada de tu destino. En mi humilde puesto de comercio, ofrezco dos tesoros que pueden cambiar el rumbo de tu travesía. La elección, sin duda, marcará tu camino en esta oscura mazmorra.",
-        "Opción 1 - Llave Misteriosa: ¿Una llave misteriosa, forjada en las entrañas de la antigua magia? Nadie sabe a qué puertas abre, pero dicen que detrás se ocultan secretos olvidados y riquezas inimaginables. ¿Te atreves a desvelar los misterios que aguardan tras ella?",
-        "Opción 2 - 100 Monedas: ¿O quizás prefieras el tintineo de las monedas, brillando con la promesa de poder y gloria? Con cien monedas, podrías comprar el favor de los seres sombríos que moran en estas profundidades, o invertirlas sabiamente en equipo que te haga más resistente a las artimañas de la mazmorra.",
+        "¡Ah, viajero intrépido!\nTe encuentras ante la encrucijada de tu destino.\nEn mi humilde puesto de comercio, ofrezco dos tesoros que pueden cambiar el rumbo de tu travesía. La elección, sin duda, marcará tu camino en esta oscura mazmorra.",
+        "Opción 1 - Llave Misteriosa:\n¿Una llave, forjada en las entrañas de la antigua magia? Nadie sabe a qué puertas abre, pero dicen que detrás se ocultan secretos olvidados y riquezas inimaginables.\n¿Te atreves a desvelar los misterios que aguardan tras ella?",
+        "Opción 2 - 100 Monedas:\n¿O quizás prefieras el tintineo de las monedas, brillando con la promesa de poder y gloria?\nCon cien monedas, podrías comprar el favor de los seres sombríos que moran en estas profundidades, o invertirlas sabiamente en equipo que te haga más resistente a las artimañas de la mazmorra.",
         "Recuerda, valiente aventurero, cada elección que hagas resonará en las sombras de este laberinto. El destino te aguarda, pero solo elige sabiamente aquellos tesoros que iluminarán tu camino hacia la victoria. ¡Buena suerte!"
     };
 
@@ -42,10 +42,9 @@ public class DialogController : MonoBehaviour
         }
         else
         {
-            HideButtons();
             dialogText.text = "";
+            UpdateButtons();
         }
-        //prevButton.gameObject.SetActive(currentParagraph > 0);
     }
 
     public void ShowPrevParagraph()
@@ -56,18 +55,42 @@ public class DialogController : MonoBehaviour
             dialogText.text = paragraphs[currentParagraph];
             UpdateButtons();
         }
-
-        //prevButton.gameObject.SetActive(currentParagraph > 0);
     }
 
     void ShowKey()
     {
-        HideCanvas();
+        if (!keyButtonClicked)
+        {
+            // Realizar acciones específicas para el botón de llave
+            // ...
+
+            keyButtonClicked = true;
+            keyButton.interactable = false;  // Desactivar interactividad
+            HideCanvas();
+        }
     }
 
     void ShowCoins()
     {
-        HideCanvas();
+        if (!coinsButtonClicked)
+        {
+            GameObject player = GameObject.Find("Player");
+
+            if (player != null)
+            {
+                GoldController goldController = player.GetComponent<GoldController>();
+
+                if (goldController != null)
+                {
+                    goldController.AddCoins(100);
+                    goldController.RefreshUI();
+                }
+            }
+
+            coinsButtonClicked = true;
+            coinsButton.interactable = false;
+            HideCanvas();
+        }
     }
 
     void UpdateButtons()
@@ -78,6 +101,8 @@ public class DialogController : MonoBehaviour
             prevButton.gameObject.SetActive(false);
             keyButton.gameObject.SetActive(false);
             coinsButton.gameObject.SetActive(false);
+
+            Time.timeScale = 1f;
         }
         else if (currentParagraph == paragraphs.Length - 1)
         {
@@ -85,6 +110,8 @@ public class DialogController : MonoBehaviour
             prevButton.gameObject.SetActive(true);
             keyButton.gameObject.SetActive(true);
             coinsButton.gameObject.SetActive(true);
+            
+            Time.timeScale = 0f;
         }
         else
         {
@@ -93,25 +120,6 @@ public class DialogController : MonoBehaviour
             keyButton.gameObject.SetActive(false);
             coinsButton.gameObject.SetActive(false);
         }
-    }
-
-    void HideButtons()
-    {
-        nextButton.gameObject.SetActive(false);
-        keyButton.gameObject.SetActive(true);
-        coinsButton.gameObject.SetActive(true);
-
-        Time.timeScale = 0f;
-    }
-
-    void ShowButtons()
-    {
-        nextButton.gameObject.SetActive(true);
-        prevButton.gameObject.SetActive(false);
-        keyButton.gameObject.SetActive(false);
-        coinsButton.gameObject.SetActive(false);
-
-        Time.timeScale = 1f;
     }
 
     void HideCanvas()
