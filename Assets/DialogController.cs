@@ -12,6 +12,9 @@ public class DialogController : MonoBehaviour
     public Button keyButton;
     public Button coinsButton;
 
+    //private bool keyButtonClicked = false;
+    private bool coinsButtonClicked = false;
+
     private string[] paragraphs = {
         "¡Ah, viajero intrépido!\nTe encuentras ante la encrucijada de tu destino.\nEn mi humilde puesto de comercio, ofrezco dos tesoros que pueden cambiar el rumbo de tu travesía. La elección, sin duda, marcará tu camino en esta oscura mazmorra.",
         "Opción 1 - Llave Misteriosa:\n¿Una llave, forjada en las entrañas de la antigua magia? Nadie sabe a qué puertas abre, pero dicen que detrás se ocultan secretos olvidados y riquezas inimaginables.\n¿Te atreves a desvelar los misterios que aguardan tras ella?",
@@ -59,15 +62,15 @@ public class DialogController : MonoBehaviour
 
     void ShowKey()
     {
-        if (!keyButtonClicked)
-        {
-            // Realizar acciones específicas para el botón de llave
-            // ...
+        //if (!keyButtonClicked)
+        //{
+        //    // Realizar acciones específicas para el botón de llave
+        //    // ...
 
-            keyButtonClicked = true;
-            keyButton.interactable = false;  // Desactivar interactividad
-            HideCanvas();
-        }
+        //    keyButtonClicked = true;
+        //    keyButton.interactable = false;  // Desactivar interactividad
+        //    HideCanvas();
+        //}
     }
 
     void ShowCoins()
