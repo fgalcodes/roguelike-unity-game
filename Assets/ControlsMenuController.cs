@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 
-public class ShopController : BaseMenuController
+public class ControlsMenuController : BaseMenuController
 {
     protected override void Start()
     {
         base.Start();
-        menuUI = GameObject.Find("InventoryShop");
+        menuUI = GameObject.Find("Controls");
         menuUI.SetActive(false);
     }
 }
