@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06b54455-30f4-4935-bbca-fe1fadb957a6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.roguelike-unity-game/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.roguelike-unity-game/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.roguelike-unity-game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.roguelike-unity-game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Beta.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Beta.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Beta.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Beta.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptObjects/PlayerWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptObjects/PlayerWeapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/SwapWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/SwapWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Attacks/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Attacks/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/L.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/L.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DialogController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialogController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Shoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Shoot.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,23 +42,10 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Prefabs/Main Camera.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Prefabs/Main Camera.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scenes/Dungeon.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scenes/NewScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scenes/NewScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scenes/Tutorial.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scenes/Tutorial.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scripts/AddRoom.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scripts/AddRoom.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scripts/AddRoom.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scripts/Destroyer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Destroyer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DialogController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyBullet.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scripts/RoomSpawner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scripts/RoomTemplates.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapon/.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scripts/Weapon/SwapWeapon.cs.meta" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
