@@ -30,4 +30,10 @@ public class GoldController : MonoBehaviour
     {
         texto.GetComponent<TextMeshProUGUI>().SetText(coins + "");
     }
+
+    public void AddCoins(int amount)
+    {
+        coins += amount;
+        RefreshUI();
+    }
 }

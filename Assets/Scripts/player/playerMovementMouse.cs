@@ -41,6 +41,7 @@ public class playerMovementMouse : MonoBehaviour
                     isMeleeAttacking = true;
                     StartCoroutine(ResetIsMelee());
                     HandleMeleeAttack();
+                    SetIsShooting(false);
                 }
             }
             else
@@ -50,7 +51,7 @@ public class playerMovementMouse : MonoBehaviour
             }
         }
 
-        if (isShooting)
+        if (isShooting && !IsMeleeAttacking())
         {
             StartCoroutine(ResetIsShooting());
         }
@@ -100,6 +101,24 @@ public class playerMovementMouse : MonoBehaviour
                     enemyScript.TomarDaño(daño);
                 }
             }
+        }
+
+        StartCoroutine(DisableShootForMelee());
+    }
+
+    IEnumerator DisableShootForMelee()
+    {
+        // Desactivar el componente Shoot solo durante la animación Melee
+        Shoot shootComponent = GetComponent<Shoot>();
+        if (shootComponent != null)
+        {
+            shootComponent.enabled = false;
+
+            // Agregar un pequeño retraso antes de reactivar el componente Shoot
+            yield return new WaitForSeconds(0.01f);
+
+            // Reactivar el componente Shoot
+            shootComponent.enabled = true;
         }
     }
 
