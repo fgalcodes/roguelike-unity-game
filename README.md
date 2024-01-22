@@ -48,7 +48,45 @@ Administra tu inventario utilizando las teclas (1, 2, 3, 4 Y 5) para equipar y u
 
 Género: RogueLike - TopDown
 
-Temática: Mazmorra procedural pixelart 2D 
+Temática: Mazmorra procedural pixelart 2D
+
+## Requisitos Principales:
+
+Mapa Procedural:
+Hemos creado un mapa procedural utilizando prefabs de las diferentes salas, donde al iniciar el juego se crean con una estructura cada vez distinta.
+
+Player:
+Hemos creado las animaciones de: Idle, Walk, Attack, Dead.
+El personaje puede equipar diferentes armas.
+
+Enemigos:
+Zombie Explosivo: Este enemigo te persigue y explota al contacto.
+Torreta: Tiene un rango de detección, y dispara hacia el jugador, con una rotación de 360 grados y con un intervalo de disparo.
+
+Puertas y llaves:
+Hemos implementado puertas “lasers” en las diferentes salas.
+Requieren una llave para abrirse.
+
+Niveles Transitable/No Transitable:
+Hemos puesto diferentes áreas transitables y obstáculos que el jugador y enemigos deben evitar.
+
+Scrolling de Fondo:
+Hemos creado un fondo dinámico (de lava) con movimiento relativo al personaje.
+
+Audio:
+El juego tiene música de fondo.
+También hemos puesto varios efectos de sonido (rugido zombies, tienda, disparo).
+
+Sistema de Diálogo:
+En el juego podrás encontrar un mercader donde hemos implementado un sistema de diálogo con 2 opciones que afecten el juego.
+
+Inventario:
+Tenemos un UI para gestionar y equipar armas.
+
+HUD y Vida:
+En la parte superior de la pantalla “en un HUD”, se puede mostrar la vida del jugador y la cantidad de dinero y llaves que tiene.
+Los enemigos a pie, tienen barras de vida sobre ellos.
+
 
 ## Instalación
 
