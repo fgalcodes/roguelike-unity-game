@@ -26,6 +26,16 @@ public class Bullet : MonoBehaviour
                 gameObject.SetActive(false);
                 //Destroy(gameObject);
                 break;
+            case "EnemigoExplosivo":
+                other.GetComponent<EnemiMovement2>().TomarDaño(daño);
+                gameObject.SetActive(false);
+                //Destroy(gameObject);
+                break;
+            case "Tower":
+                other.GetComponent<TowerHealth>().TomarDaño(daño);
+                gameObject.SetActive(false);
+                //Destroy(gameObject);
+                break;
             case "Wall":
                 gameObject.SetActive(false);
                 Debug.Log("trigger");

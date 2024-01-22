@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,10 +19,13 @@ public class EnemiMovement : MonoBehaviour
     public float bloodDuration = 60f;
 
     private GameObject playerObject;
+    public GameObject goldPrefab;
 
     private Animator animator;
 
     private bool isAttacking = false;
+
+    private AudioSource audioSource;
 
     public enum States
     {
@@ -43,6 +47,13 @@ public class EnemiMovement : MonoBehaviour
         if (healthBar != null)
         {
             healthBar.UpdateHealthbar(maxHealth, currentHealth, currentHealth);
+        }
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource != null && audioSource.clip != null)
+        {
+            audioSource.loop = true;
+            audioSource.Play();
         }
     }
 
@@ -87,6 +98,14 @@ public class EnemiMovement : MonoBehaviour
     }
     void moveCharacter(Vector2 direction)
     {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 0.1f); // Raycast en la dirección de movimiento
+
+        if (hit.collider != null && hit.collider.CompareTag("Wall")) // Comprueba si el Raycast choca con una pared
+        {
+            // Si el Raycast colisiona con una pared, no se mueve en esa dirección
+            return;
+        }
+
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
 
@@ -138,6 +157,11 @@ public class EnemiMovement : MonoBehaviour
         {
             BloodEffect blood = Instantiate(bloodEffectPrefab, transform.position, Quaternion.identity);
             blood.ShowBloodEffect(transform.position, bloodDuration);
+        }
+
+        if (goldPrefab != null)
+        {
+            Instantiate(goldPrefab, transform.position, Quaternion.identity);
         }
 
         Destroy(gameObject);

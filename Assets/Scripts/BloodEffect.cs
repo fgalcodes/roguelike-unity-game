@@ -8,8 +8,10 @@ public class BloodEffect : MonoBehaviour
 
     private void Start()
     {
+        
         // Oculta la imagen de sangre al inicio
         GetComponent<SpriteRenderer>().enabled = false;
+        
     }
 
     public void ShowBloodEffect(Vector3 position, float duration)
@@ -18,6 +20,7 @@ public class BloodEffect : MonoBehaviour
         transform.position = position;
         GetComponent<SpriteRenderer>().sprite = bloodSprite;
         GetComponent<SpriteRenderer>().enabled = true;
+        GetComponent<SpriteRenderer>().sortingOrder = 10;
 
         // Inicia una corutina para ocultar la imagen después de cierto tiempo
         StartCoroutine(HideBloodAfterDuration(duration));
