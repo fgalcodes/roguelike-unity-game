@@ -2981,7 +2981,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: -577549666, guid: e5662299c7586bf4f937cbe5565914e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3191,7 +3191,7 @@ GameObject:
   - component: {fileID: 1749460839319599430}
   - component: {fileID: 836240946167162995}
   m_Layer: 0
-  m_Name: 32x32-OBJECTS_20
+  m_Name: Bear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -19,6 +19,8 @@ public class playerMovementMouse : MonoBehaviour
     private bool isShooting;
     private bool isMeleeAttacking;
 
+    [SerializeField] private AudioSource meleeSound;
+
     public float daño = 10f;
 
     void Update()
@@ -103,6 +105,11 @@ public class playerMovementMouse : MonoBehaviour
             }
         }
 
+        if (meleeSound != null)
+        {
+            meleeSound.PlayOneShot(meleeSound.clip);
+        }
+
         StartCoroutine(DisableShootForMelee());
     }
 
@@ -134,5 +141,10 @@ public class playerMovementMouse : MonoBehaviour
     public bool IsMeleeAttacking()
     {
         return isMeleeAttacking;
+    }
+
+    public int GetWeaponIndex()
+    {
+        return swapWeapon.GetIndex();
     }
 }
