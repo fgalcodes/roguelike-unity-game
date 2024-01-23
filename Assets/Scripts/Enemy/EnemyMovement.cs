@@ -88,6 +88,25 @@ public class EnemiMovement : MonoBehaviour
         direction.Normalize();
         movement = direction;
 
+        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+
+        if (distanceToPlayer < audioSource.maxDistance)
+        {
+            // Reproducir el sonido
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
+        }
+        else
+        {
+            // Detener el sonido si está reproduciéndose
+            if (audioSource.isPlaying)
+            {
+                audioSource.Stop();
+            }
+        }
+
     }
     private void FixedUpdate()
     {
