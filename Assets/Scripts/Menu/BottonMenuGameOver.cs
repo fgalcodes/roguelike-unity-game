@@ -8,7 +8,7 @@ public class BottonMenuGameOver : MonoBehaviour
     public void RestartLevel()
     {
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Menu");
     }
 
     public void BackToMenu()

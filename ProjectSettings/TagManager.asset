@@ -30,6 +30,7 @@ TagManager:
   - Tower
   - EnemigoExplosivo
   - Spikes
+  - PlayerSpawnPoint
   layers:
   - Default
   - TransparentFX
