@@ -5,7 +5,6 @@ using UnityEngine;
 public class Shoot : MonoBehaviour
 {
     [SerializeField] private Transform controladorDisparo;
-    [SerializeField] private GameObject bullet;
     [SerializeField] private playerMovementMouse playerMovement;
 
     private void Start()
@@ -17,7 +16,7 @@ public class Shoot : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            // Solo dispara si no se está realizando la animación Melee
+            // Solo dispara si no se estï¿½ realizando la animaciï¿½n Melee
             if (!playerMovement.IsMeleeAttacking())
             {
                 Shooting();

@@ -6,22 +6,24 @@ using TMPro;
 
 public class DialogController : MonoBehaviour
 {
+    // public PlayerKeys playerKeys;
     public TMP_Text dialogText;
     public Button nextButton;
     public Button prevButton;
     public Button keyButton;
     public Button coinsButton;
 
-    //private bool keyButtonClicked = false;
+    private bool keyButtonClicked = false;
     private bool coinsButtonClicked = false;
 
     private bool buttonsLocked = false;
 
-    private string[] paragraphs = {
-        "¡Ah, viajero intrépido!\nTe encuentras ante la encrucijada de tu destino.\nEn mi humilde puesto de comercio, ofrezco dos tesoros que pueden cambiar el rumbo de tu travesía. La elección, sin duda, marcará tu camino en esta oscura mazmorra.",
-        "Opción 1 - Llave Misteriosa:\n¿Una llave, forjada en las entrañas de la antigua magia? Nadie sabe a qué puertas abre, pero dicen que detrás se ocultan secretos olvidados y riquezas inimaginables.\n¿Te atreves a desvelar los misterios que aguardan tras ella?",
-        "Opción 2 - 100 Monedas:\n¿O quizás prefieras el tintineo de las monedas, brillando con la promesa de poder y gloria?\nCon cien monedas, podrías comprar el favor de los seres sombríos que moran en estas profundidades, o invertirlas sabiamente en equipo que te haga más resistente a las artimañas de la mazmorra.",
-        "Recuerda, valiente aventurero, cada elección que hagas resonará en las sombras de este laberinto. El destino te aguarda, pero solo elige sabiamente aquellos tesoros que iluminarán tu camino hacia la victoria. ¡Buena suerte!",
+    private string[] paragraphs =
+    {
+        "Â¡Ah, viajero intrÃ©pido!\nTe encuentras ante la encrucijada de tu destino.\nEn mi humilde puesto de comercio, ofrezco dos tesoros que pueden cambiar el rumbo de tu travesÃ­a. La elecciÃ³n, sin duda, marcarÃ¡ tu camino en esta oscura mazmorra.",
+        "OpciÃ³n 1 - Llave Misteriosa:\nÂ¿Una llave, forjada en las entraÃ±as de la antigua magia? Nadie sabe a quÃ© puertas abre, pero dicen que detrÃ¡s se ocultan secretos olvidados y riquezas inimaginables.\nÂ¿Te atreves a desvelar los misterios que aguardan tras ella?",
+        "OpciÃ³n 2 - 100 Monedas:\nÂ¿O quizÃ¡s prefieras el tintineo de las monedas, brillando con la promesa de poder y gloria?\nCon cien monedas, podrÃ­as comprar el favor de los seres sombrÃ­os que moran en estas profundidades, o invertirlas sabiamente en equipo que te haga mÃ¡s resistente a las artimaÃ±as de la mazmorra.",
+        "Recuerda, valiente aventurero, cada elecciÃ³n que hagas resonarÃ¡ en las sombras de este laberinto. El destino te aguarda, pero solo elige sabiamente aquellos tesoros que iluminarÃ¡n tu camino hacia la victoria. Â¡Buena suerte!",
         ""
     };
 
@@ -84,15 +86,30 @@ public class DialogController : MonoBehaviour
 
     void ShowKey()
     {
-        //if (!keyButtonClicked)
-        //{
-        //    // Realizar acciones específicas para el botón de llave
-        //    // ...
+        if (!keyButtonClicked)
+        {
+            // Realizar acciones especÃ­ficas para el botÃ³n de llave
+            // ...
 
-        //    keyButtonClicked = true;
-        //    keyButton.interactable = false;  // Desactivar interactividad
-        //    HideCanvas();
-        //}
+            GameObject player = GameObject.Find("Player");
+
+            if (player != null)
+            {
+                KeyInventory keyController = player.GetComponent<KeyInventory>();
+
+                if (keyController != null)
+                {
+                    keyController.playerKeys.keys += 10;
+                    keyController.UpdateKeyText();
+                }
+            }
+
+            keyButtonClicked = true;
+            keyButton.interactable = false;
+            coinsButtonClicked = true;
+            coinsButton.interactable = false;// Desactivar interactividad
+            HideCanvas();
+        }
     }
 
     void ShowCoins()
@@ -112,6 +129,8 @@ public class DialogController : MonoBehaviour
                 }
             }
 
+            keyButtonClicked = true;
+            keyButton.interactable = false;
             coinsButtonClicked = true;
             coinsButton.interactable = false;
             HideCanvas();
@@ -135,7 +154,7 @@ public class DialogController : MonoBehaviour
             prevButton.gameObject.SetActive(true);
             keyButton.gameObject.SetActive(true);
             coinsButton.gameObject.SetActive(true);
-            
+
             Time.timeScale = 0f;
         }
         else
