@@ -69,10 +69,10 @@ public class MenuButton : MonoBehaviour
         }
     }
 
-    // Permet carregar una escena específica ("Level 4") quan es prem el botó "Crèdits".
+    // Permet carregar una escena específica ("Credits") quan es prem el botó "Crèdits".
     public void Creditos()
     {
-        SceneManager.LoadScene("Level 4");
+        SceneManager.LoadScene("Credits");
     }
 }
 

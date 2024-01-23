@@ -1291,6 +1291,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemigo
       objectReference: {fileID: 0}
+    - target: {fileID: 5910216552242385558, guid: d695dff433bd85342b7595103e8e8333,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6660000663915454266, guid: d695dff433bd85342b7595103e8e8333,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1423,6 +1428,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Zombie2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4211047404648789457, guid: cb53ead644f9ae44fb3d791df2d9c99f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3766,6 +3776,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1673714973}
   m_CullTransparentMesh: 1
+--- !u!1001 &1714335830
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1901553997893835100, guid: 8ca7c00da774d5a46a6f168d5aea341d,
+        type: 3}
+      propertyPath: m_Name
+      value: exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4358032568211626287, guid: 8ca7c00da774d5a46a6f168d5aea341d,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458971059310728356, guid: 8ca7c00da774d5a46a6f168d5aea341d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458971059310728356, guid: 8ca7c00da774d5a46a6f168d5aea341d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458971059310728356, guid: 8ca7c00da774d5a46a6f168d5aea341d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458971059310728356, guid: 8ca7c00da774d5a46a6f168d5aea341d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458971059310728356, guid: 8ca7c00da774d5a46a6f168d5aea341d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458971059310728356, guid: 8ca7c00da774d5a46a6f168d5aea341d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458971059310728356, guid: 8ca7c00da774d5a46a6f168d5aea341d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458971059310728356, guid: 8ca7c00da774d5a46a6f168d5aea341d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458971059310728356, guid: 8ca7c00da774d5a46a6f168d5aea341d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458971059310728356, guid: 8ca7c00da774d5a46a6f168d5aea341d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8ca7c00da774d5a46a6f168d5aea341d, type: 3}
 --- !u!1 &1792360507
 GameObject:
   m_ObjectHideFlags: 0
@@ -7061,6 +7144,7 @@ MonoBehaviour:
   cam: {fileID: 792469878682703664}
   animator: {fileID: 9166266062356770068}
   swapWeapon: {fileID: 6419758546040294860}
+  meleeSound: {fileID: 0}
   "da\xF1o": 20
 --- !u!114 &1595596904958822176
 MonoBehaviour:
@@ -8095,7 +8179,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.9461539, y: 1.6615385}
+    oldSize: {x: 1.6866666, y: 1.44}
     newSize: {x: 1.9461539, y: 1.6615385}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -8928,8 +9012,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controladorDisparo: {fileID: 4781982660147697279}
-  bullet: {fileID: 3300052460564410105, guid: 3db8e72fdecd56e4fa9fa843cae6ac61, type: 3}
   playerMovement: {fileID: 1525407264858553443}
+  pistolSound: {fileID: 0}
+  rifleSound: {fileID: 0}
+  shotgunSound: {fileID: 0}
+  meleeSound: {fileID: 0}
 --- !u!1 &7338427372283649403
 GameObject:
   m_ObjectHideFlags: 0
@@ -12981,3 +13068,4 @@ SceneRoots:
   - {fileID: 1540717220}
   - {fileID: 370403965}
   - {fileID: 795061026}
+  - {fileID: 1714335830}

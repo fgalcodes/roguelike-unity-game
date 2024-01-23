@@ -6,8 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="06b54455-30f4-4935-bbca-fe1fadb957a6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.roguelike-unity-game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.roguelike-unity-game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/exit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/exit.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 4.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 4.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Beta.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Beta.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/SwapWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/SwapWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/mercader.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/mercader.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/MenuButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu/MenuButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnPointDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnPointDetector.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,12 +50,20 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Prefabs/Dungeon/Close.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Prefabs/Dungeon/EntryRoom.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Prefabs/Dungeon/EntryRoom.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Prefabs/Dungeon/ExitGenerator.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BoardManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Destroyer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DialogController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyBullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/Scripts/SpawnPointDetector.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapon/.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WinGame.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/fgali/RiderProjects/roguelike-unity-game/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{

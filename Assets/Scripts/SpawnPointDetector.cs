@@ -28,6 +28,10 @@ public class SpawnPointDetector : MonoBehaviour
         {
             rooms = GameObject.FindGameObjectsWithTag("Room");
             Instantiate(exit, rooms[Random.Range(0, rooms.Length - 1)].transform);
+            for (int i = 0; i < points.Length; i++)
+            {
+                Destroy(points[i]);
+            }
             Destroy(gameObject);
         }
 
