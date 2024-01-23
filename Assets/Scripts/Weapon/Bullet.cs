@@ -44,7 +44,7 @@ public class Bullet : MonoBehaviour
 
         }
     }
-    // escoger por trigger o collision
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         Debug.Log("Hey");

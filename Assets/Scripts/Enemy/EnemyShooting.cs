@@ -10,14 +10,13 @@ public class EnemyShooting : MonoBehaviour
 
     [SerializeField] private float bulletRange = 14;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
         transform.LookAt(_player.transform);
     }
 
-    // Update is called once per frame
     void Update()
     {
         float distance = Vector2.Distance(transform.position, _player.transform.position);

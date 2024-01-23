@@ -26,7 +26,6 @@ public class KeyInventory : MonoBehaviour
             UpdateKeyText();
 
             collision.gameObject.SetActive(false);
-
         }
     }
 

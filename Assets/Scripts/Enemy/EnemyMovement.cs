@@ -92,7 +92,6 @@ public class EnemiMovement : MonoBehaviour
 
         if (distanceToPlayer < audioSource.maxDistance)
         {
-            // Reproducir el sonido
             if (!audioSource.isPlaying)
             {
                 audioSource.Play();
@@ -100,7 +99,6 @@ public class EnemiMovement : MonoBehaviour
         }
         else
         {
-            // Detener el sonido si está reproduciéndose
             if (audioSource.isPlaying)
             {
                 audioSource.Stop();
@@ -117,11 +115,10 @@ public class EnemiMovement : MonoBehaviour
     }
     void moveCharacter(Vector2 direction)
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 0.1f); // Raycast en la dirección de movimiento
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 0.1f);
 
-        if (hit.collider != null && hit.collider.CompareTag("Wall")) // Comprueba si el Raycast choca con una pared
+        if (hit.collider != null && hit.collider.CompareTag("Wall"))
         {
-            // Si el Raycast colisiona con una pared, no se mueve en esa dirección
             return;
         }
 
@@ -134,7 +131,6 @@ public class EnemiMovement : MonoBehaviour
         {
             currentState = States.Attack;
         }
-
     }
 
     private void OnCollisionStay2D(Collision2D collision)

@@ -8,13 +8,12 @@ public class BaseMenuController : MonoBehaviour
 
     protected virtual void Start()
     {
-        // Puedes inicializar variables comunes aquí
         menuUI = null;
     }
 
     protected virtual void Update()
     {
-        // Puedes agregar lógica común de actualización aquí
+        
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)

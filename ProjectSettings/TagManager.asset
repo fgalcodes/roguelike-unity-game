@@ -30,6 +30,7 @@ TagManager:
   - Tower
   - EnemigoExplosivo
   - Spikes
+  - EnemigoPatrol
   layers:
   - Default
   - TransparentFX
@@ -43,7 +44,7 @@ TagManager:
   - Enemigoo
   - Chekpoint
   - Spikes
-  - 
+  - Player
   - 
   - 
   - 
