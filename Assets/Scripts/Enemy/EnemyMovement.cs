@@ -24,6 +24,7 @@ public class EnemiMovement : MonoBehaviour
     private Animator animator;
 
     private bool isAttacking = false;
+    private bool hasEnteredAttackState = false;
 
     private AudioSource audioSource;
 
@@ -130,12 +131,13 @@ public class EnemiMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             currentState = States.Attack;
+            hasEnteredAttackState = true;
         }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && !hasEnteredAttackState)
         {
             isAttacking = true;
         }
@@ -147,6 +149,7 @@ public class EnemiMovement : MonoBehaviour
         {
             isAttacking = false;
             currentState = States.Run;
+            hasEnteredAttackState = false;
         }
     }
 
