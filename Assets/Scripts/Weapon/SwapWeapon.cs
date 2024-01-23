@@ -1,11 +1,10 @@
 using System;
 using System.Diagnostics;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class SwapWeapon : MonoBehaviour
 {
-    public AnimatorController[] weapon;
+    public RuntimeAnimatorController[] weapon;
     public Animator animator;
     private int index = 0;
 
