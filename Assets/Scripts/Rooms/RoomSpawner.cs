@@ -14,7 +14,7 @@ public class RoomSpawner : MonoBehaviour
     private RoomTemplates templates;
     private int rand;
     public bool spawned = false;
-    public float waitTime = 2f;
+    public float waitTime = 5f;
     
     void Start()
     {
@@ -64,7 +64,7 @@ public class RoomSpawner : MonoBehaviour
         } 
         else if(other.gameObject.CompareTag("SpawnPoint") && spawned == false){
     		if(other.GetComponent<RoomSpawner>().spawned == false && spawned == false){
-                Invoke("ClosedRoom", 10f);
+                Invoke("ClosedRoom", 4f);
     		} 
     		spawned = true;
     	}
